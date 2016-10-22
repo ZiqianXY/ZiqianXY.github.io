@@ -1,0 +1,633 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Robot Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="app,nao," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/icon.jpg?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nao网络控制台使用指南">
+<meta property="og:url" content="http://ziqiany.com/art/2016/Nao Control Center Manual.html">
+<meta property="og:site_name" content="Ziqiany">
+<meta property="og:description" content="NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。">
+<meta property="og:image" content="http://ziqiany.com/images/NaoControlCenter.jpg">
+<meta property="og:updated_time" content="2016-10-22T01:52:44.471Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nao网络控制台使用指南">
+<meta name="twitter:description" content="NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。">
+<meta name="twitter:image" content="http://ziqiany.com/images/NaoControlCenter.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://ziqiany.com/art/2016/Nao Control Center Manual.html"/>
+
+  <title> Nao网络控制台使用指南 | Ziqiany </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Ziqiany</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">星辰大海 如约而至</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Nao网络控制台使用指南
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-23T08:00:00+08:00" content="2016-05-23">
+              2016-05-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。</p>
+<a id="more"></a>
+<h2 id="一、-连接步骤"><a href="#一、-连接步骤" class="headerlink" title="一、 连接步骤"></a><strong>一、 连接步骤</strong></h2><p>浏览器客户端只需在使用时访问对应局域网链接即可，具体步骤如下详述：</p>
+<h3 id="1-建立热点"><a href="#1-建立热点" class="headerlink" title="1.    建立热点"></a>1.    <strong>建立热点</strong></h3><p>打开Nao机器人之前，请使用手机或其他设备开启一个热点，并修改热点名称和密码分别为Nao已经连接过的网络即可，以便机器人开机能够自动连接到此局域网络，否则后续连接操作将无法进行。 </p>
+<h3 id="2-启动Nao机器人"><a href="#2-启动Nao机器人" class="headerlink" title="2.    启动Nao机器人"></a>2.    <strong>启动Nao机器人</strong></h3><p>短暂按下Nao胸部按钮，指示灯将亮起，启动Nao机器人，等待3-5分钟不等，待机器人发出“looking for connected … ”的声音后，即表示完成启动。正常启动后，一般机器人会自动站立。</p>
+<h3 id="3-获取ip，访问控制台"><a href="#3-获取ip，访问控制台" class="headerlink" title="3.    获取ip，访问控制台"></a>3.    <strong>获取ip，访问控制台</strong></h3><p>再次短暂按下Nao胸部按钮，Nao将会告知服务器地址，记下这个ip (例如，192.168.1.107)，然后用任意连接至此热点的设备访问1111端口，具体操作为：打开浏览器，访问链接[ ip:1111 ] (注意，冒号必须是英文符号，例如，192.168.1.107:1111)，以上操作无误即可进入如下控制台界面。</p>
+<p> <img src="images/NaoControlCenter.jpg" alt="Nao Control Center UI"></p>
+<h2 id="二、-控制台使用说明"><a href="#二、-控制台使用说明" class="headerlink" title="二、 控制台使用说明"></a><strong>二、 控制台使用说明</strong></h2><p>控制台主要提供了基本的运动和简易交互控制功能，主要包括：移动（前后左右）、舞蹈、模仿、对话、休息、电源等功能。</p>
+<h3 id="1-移动"><a href="#1-移动" class="headerlink" title="1. 移动"></a>1. 移动</h3><p><strong>[^] [v] [&lt;] [&gt;]</strong><br>分别对应前进、后退、左转90度、右转90度。方向为机器人参考方向。前进和后退会同时 [加/减10%音量]，可根据需要执行相应操作。<br><strong>[StandUp] [SitDown]  </strong><br>站立/坐下。如果机器人当前不在该状态，将执行对应动作，否则无响应。</p>
+<h3 id="2-舞蹈"><a href="#2-舞蹈" class="headerlink" title="2. 舞蹈"></a>2. 舞蹈</h3><p><strong>[GangnamStyle] [JazzDance] [TaiChi]  </strong><br>分别对应 “江南style”“爵士舞”“太极”。舞蹈时间较长，期间建议不要点击 [Stop] 终止操作，有可能造成机器人摔倒。</p>
+<h3 id="3-模仿"><a href="#3-模仿" class="headerlink" title="3. 模仿"></a>3. 模仿</h3><p><strong>[Drive] [TakePhoto]</strong><br>分别对应“开车”和“拍照”模仿动作。同上，不要在运动中终止操作。</p>
+<h3 id="4-对话"><a href="#4-对话" class="headerlink" title="4. 对话"></a>4. 对话</h3><p><strong>[Chat]</strong><br>启动对话模式，可与机器人进行对话，并可根据机器人提示说明，通过对话控制相关动作。目前版本的中文识别效果不佳，不推荐使用。</p>
+<h3 id="5-休息"><a href="#5-休息" class="headerlink" title="5.    休息"></a>5.    休息</h3><p><strong>[Sleep]</strong><br>当长时间开启时，机器人关节和CPU会发热，如果散热条件不好会造成局部过热，此时可通过此操作将各关节电机卸载，缓解过热问题。</p>
+<h3 id="6-电源"><a href="#6-电源" class="headerlink" title="6.    电源"></a>6.    电源</h3><p><strong>[PowerOff]</strong><br>执行关机操作，机器人将复位关机。</p>
+<h2 id="三、-特别说明："><a href="#三、-特别说明：" class="headerlink" title="三、 特别说明："></a><strong>三、 特别说明：</strong></h2><ol>
+<li>由于采用远程控制方式，实际操作会有一定延时，一个动作未结束时，建议不要多次点击其他动作，有可能造成后续动作紊乱。</li>
+<li>机器人自平衡能力有限，仅限在平面硬地板上完成动作，以免造成意外跌落损坏。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/app/" rel="tag">#app</a>
+          
+            <a href="/tags/nao/" rel="tag">#nao</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/art/2016/module flow.html" rel="next" title="OBD-Service module-flow">
+                <i class="fa fa-chevron-left"></i> OBD-Service module-flow
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/art/2016/deploy the Nao Controller Server.html" rel="prev" title="NaoController deployment with webpy">
+                NaoController deployment with webpy <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/icon.jpg"
+               alt="Freddy" />
+          <p class="site-author-name" itemprop="name">Freddy</p>
+          <p class="site-description motion-element" itemprop="description">My conquest is the sea of stars.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ziqianxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://geekie.cc/" target="_blank" title="Geekie">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Geekie
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、-连接步骤"><span class="nav-text">一、 连接步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-建立热点"><span class="nav-text">1.    建立热点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-启动Nao机器人"><span class="nav-text">2.    启动Nao机器人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-获取ip，访问控制台"><span class="nav-text">3.    获取ip，访问控制台</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、-控制台使用说明"><span class="nav-text">二、 控制台使用说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-移动"><span class="nav-text">1. 移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-舞蹈"><span class="nav-text">2. 舞蹈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-模仿"><span class="nav-text">3. 模仿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-对话"><span class="nav-text">4. 对话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-休息"><span class="nav-text">5.    休息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-电源"><span class="nav-text">6.    电源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、-特别说明："><span class="nav-text">三、 特别说明：</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Freddy</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>

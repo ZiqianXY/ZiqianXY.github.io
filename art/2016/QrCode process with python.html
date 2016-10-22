@@ -1,0 +1,635 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Robot Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="python,app," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/icon.jpg?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二维码生成和解析工具">
+<meta property="og:url" content="http://ziqiany.com/art/2016/QrCode process with python.html">
+<meta property="og:site_name" content="Ziqiany">
+<meta property="og:description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
+<meta property="og:updated_time" content="2016-10-22T01:47:28.081Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二维码生成和解析工具">
+<meta name="twitter:description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://ziqiany.com/art/2016/QrCode process with python.html"/>
+
+  <title> 二维码生成和解析工具 | Ziqiany </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Ziqiany</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">星辰大海 如约而至</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-tags " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                二维码生成和解析工具
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-18T08:00:00+08:00" content="2016-06-18">
+              2016-06-18
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。</p>
+<a id="more"></a>
+<h2 id="qrcode"><a href="#qrcode" class="headerlink" title="qrcode"></a><a href="https://pypi.python.org/pypi/qrcode" target="_blank" rel="external"><strong>qrcode</strong></a></h2><p>用于生成二维码的工具包。详情参考<a href="https://pypi.python.org/pypi/qrcode" target="_blank" rel="external">qrcode 5.3 : Python Package Index</a>，使用起来更简单，如下是示例代码：</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip <span class="keyword">install</span> qrcode</div></pre></td></tr></table></figure>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a><strong>示例代码</strong></h3><p>一般用法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qrcode </div><div class="line">img = qrcode.make(<span class="string">'hello world'</span>)</div><div class="line">img.save(<span class="string">'test.png'</span>)</div></pre></td></tr></table></figure></p>
+<p>高级用法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qrcode </div><div class="line">qr = qrcode.QRCode(     </div><div class="line">    version=<span class="number">1</span>,     </div><div class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,     </div><div class="line">    box_size=<span class="number">10</span>,     </div><div class="line">    border=<span class="number">4</span>, </div><div class="line">) </div><div class="line">qr.add_data(<span class="string">'this is a new qrcode'</span>) </div><div class="line">qr.make(fit=<span class="keyword">True</span>)  </div><div class="line">img = qr.make_image()</div><div class="line">img.save(<span class="string">'test.png'</span>)</div></pre></td></tr></table></figure>
+<h2 id="zbar"><a href="#zbar" class="headerlink" title="zbar "></a><a href="https://pypi.python.org/pypi/zbar" target="_blank" rel="external"><strong>zbar </strong></a></h2><p>用于解析图像和视频中二维码的工具包。详情参考<a href="http://zbar.sourceforge.net/index.html" target="_blank" rel="external">ZBar bar code reader</a>。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>由于官方的包最高完美支持到python2.6，而主流python版本用的是2.7，windows下这里有一个2.7的msi，来源不详</p>
+<h3 id="示例代码-1"><a href="#示例代码-1" class="headerlink" title="示例代码"></a><strong>示例代码</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line"><span class="keyword">import</span> zbar</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_QR</span> <span class="params">(imgPath)</span>:</span></div><div class="line">    scanner = zbar.ImageScanner()</div><div class="line">    scanner.parse_config(<span class="string">"enable"</span>)</div><div class="line">    pil = Image.open(imgPath).convert(<span class="string">'L'</span>)</div><div class="line">    width, height = pil.size</div><div class="line">    raw = pil.tobytes()</div><div class="line">    image = zbar.Image(width, height, <span class="string">'Y800'</span>, raw)</div><div class="line">    scanner.scan(image)</div><div class="line">    data = <span class="string">''</span></div><div class="line">    <span class="keyword">for</span> symbol <span class="keyword">in</span> image:</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            data += symbol.data.decode(<span class="string">'utf-8'</span>).encode(<span class="string">'sjis'</span>).decode(<span class="string">'utf-8'</span>)</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            data += symbol.data</div><div class="line">    <span class="keyword">del</span>(image)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> data:</div><div class="line">        data += <span class="string">'Nan'</span></div><div class="line">    <span class="keyword">return</span> data</div><div class="line"></div><div class="line">img = <span class="string">'images/barcode_01.jpg'</span></div><div class="line">qrdata= get_QR(img)</div><div class="line"><span class="keyword">print</span> <span class="string">'[DATA]'</span>, qrdata</div></pre></td></tr></table></figure>
+<h3 id="中文乱码解决"><a href="#中文乱码解决" class="headerlink" title="中文乱码解决"></a><strong>中文乱码解决</strong></h3><p>由于编码问题（参考：<a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386819196283586a37629844456ca7e5a7faa9b94ee8000" target="_blank" rel="external">字符串和编码 - 廖雪峰</a>），默认unicode编码，所以如果不进行处理，通常会有中文乱码产生，以下为处理方式，经测试ok</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">try</span>:</div><div class="line">	<span class="class"><span class="keyword">data</span> += symbol.<span class="keyword">data</span>.decode('<span class="title">utf</span>-8').encode('<span class="title">sjis'</span>).decode('<span class="title">utf</span>-8')</span></div><div class="line"><span class="title">except</span>:</div><div class="line">	<span class="class"><span class="keyword">data</span> += symbol.<span class="keyword">data</span></span></div></pre></td></tr></table></figure>
+<p>以上简单操作即完成QR-Code的生成和解析工作，不过解析的正确率有待验证，特别是扭曲变形或者背景稍混乱的图片，有可能部分识别错误或者无法识别。</p>
+<h2 id="Zxing-Zbar"><a href="#Zxing-Zbar" class="headerlink" title="Zxing+Zbar"></a><strong>Zxing+Zbar</strong></h2><p>另外几篇关于Zxing源码的分析，以及Android下整合Zxing和zbar的文章</p>
+<blockquote>
+<ol>
+<li><a href="http://www.lai18.com/content/1012109.html" target="_blank" rel="external">秒杀主流应用的二维码扫描</a></li>
+<li><a href="http://kuangjianwei.blog.163.com/blog/static/190088953201361015055110/" target="_blank" rel="external">zxing源码分析——QR码部分</a></li>
+<li><a href="http://kuangjianwei.blog.163.com/blog/static/1900889532013612103136888/" target="_blank" rel="external">zxing源码分析——DataMatrix码部分</a></li>
+</ol>
+</blockquote>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag">#python</a>
+          
+            <a href="/tags/app/" rel="tag">#app</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/art/2016/MLND_P0_Titanic_Survival_Exploration.html" rel="next" title="MLND_P0 Titanic Survival Exploration">
+                <i class="fa fa-chevron-left"></i> MLND_P0 Titanic Survival Exploration
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/art/2016/learning data science within 10 days.html" rel="prev" title="10天100小时学数据科学 [转]">
+                10天100小时学数据科学 [转] <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/icon.jpg"
+               alt="Freddy" />
+          <p class="site-author-name" itemprop="name">Freddy</p>
+          <p class="site-description motion-element" itemprop="description">My conquest is the sea of stars.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/ziqianxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://geekie.cc/" target="_blank" title="Geekie">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Geekie
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#qrcode"><span class="nav-text">qrcode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码"><span class="nav-text">示例代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zbar"><span class="nav-text">zbar </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码-1"><span class="nav-text">示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文乱码解决"><span class="nav-text">中文乱码解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zxing-Zbar"><span class="nav-text">Zxing+Zbar</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Freddy</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>
