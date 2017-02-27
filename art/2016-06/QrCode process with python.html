@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,app," />
+  <meta name="keywords" content="app,python," />
 
 
 
@@ -105,10 +105,10 @@
 <meta name="description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="二维码生成和解析工具">
-<meta property="og:url" content="http://ziqiany.com/art/2016/QrCode process with python.html">
-<meta property="og:site_name" content="Ziqiany">
+<meta property="og:url" content="http://ziqiany.com/art/2016-06/QrCode process with python.html">
+<meta property="og:site_name" content="八田贝">
 <meta property="og:description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
-<meta property="og:updated_time" content="2016-10-22T01:47:28.081Z">
+<meta property="og:updated_time" content="2017-01-13T11:36:49.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="二维码生成和解析工具">
 <meta name="twitter:description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
@@ -119,12 +119,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
+    sidebar: {"position":"right","display":"hide"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: 'Freddy'
     }
   };
 </script>
@@ -132,12 +132,12 @@
 
 
 
-  <link rel="canonical" href="http://ziqiany.com/art/2016/QrCode process with python.html"/>
+  <link rel="canonical" href="http://ziqiany.com/art/2016-06/QrCode process with python.html"/>
 
-  <title> 二维码生成和解析工具 | Ziqiany </title>
+  <title> 二维码生成和解析工具 | 八田贝 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -165,7 +165,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Ziqiany</span>
+      <span class="site-title">八田贝</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -192,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -255,8 +255,8 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T08:00:00+08:00" content="2016-06-18">
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-18T00:00:00+08:00" content="2016-06-18">
               2016-06-18
             </time>
           </span>
@@ -264,6 +264,13 @@
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/art/2016-06/QrCode process with python.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="art/2016-06/QrCode process with python.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -319,6 +326,22 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>打赏不如交个朋友</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Freddy WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -327,9 +350,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag">#python</a>
-          
             <a href="/tags/app/" rel="tag">#app</a>
+          
+            <a href="/tags/python/" rel="tag">#python</a>
           
         </div>
       
@@ -338,7 +361,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/art/2016/MLND_P0_Titanic_Survival_Exploration.html" rel="next" title="MLND_P0 Titanic Survival Exploration">
+              <a href="/art/2016-06/MLND_P0_Titanic_Survival_Exploration.html" rel="next" title="MLND_P0 Titanic Survival Exploration">
                 <i class="fa fa-chevron-left"></i> MLND_P0 Titanic Survival Exploration
               </a>
             
@@ -346,7 +369,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/art/2016/learning data science within 10 days.html" rel="prev" title="10天100小时学数据科学 [转]">
+              <a href="/art/2016-07/learning data science within 10 days.html" rel="prev" title="10天100小时学数据科学 [转]">
                 10天100小时学数据科学 [转] <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -363,6 +386,25 @@
 
     <div class="post-spread">
       
+        <div class="ds-share flat" data-thread-key="art/2016-06/QrCode process with python.html"
+     data-title="二维码生成和解析工具"
+     data-content=""
+     data-url="http://ziqiany.com/art/2016-06/QrCode process with python.html">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
     </div>
   </div>
 
@@ -373,6 +415,10 @@
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="art/2016-06/QrCode process with python.html"
+           data-title="二维码生成和解析工具" data-url="http://ziqiany.com/art/2016-06/QrCode process with python.html">
+      </div>
     
   </div>
 
@@ -397,10 +443,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            概览
           </li>
         </ul>
       
@@ -416,8 +462,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -426,8 +472,8 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">22</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -449,11 +495,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://geekie.cc/" target="_blank" title="Geekie">
+                <a href="http://www.jianshu.com/u/b08df9e2410f" target="_blank" title="简书">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  Geekie
+                  简书
                 </a>
               </span>
             
@@ -494,7 +540,7 @@
         <div class="copyright" >
   
   &copy;  2015 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -502,11 +548,11 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
@@ -596,9 +642,28 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ziqiany"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 

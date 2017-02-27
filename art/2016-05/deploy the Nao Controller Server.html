@@ -86,7 +86,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="dailylife,app," />
+  <meta name="keywords" content="nao,app," />
 
 
 
@@ -102,22 +102,16 @@
 
 
 
-<meta name="description" content="很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！
-倘生活真是如此，便也无甚欢乐可言，自然不可谓之生活，只能算作日子罢了。
-常挂嘴边一句话，意外之中总有惊喜。如果说生活总会被我们看似狗血的剧情所包裹，那么我选择从无到有去做一款图书馆的App应该算是其中一个。">
+<meta name="description" content="Nao robot , is deployed on a Centoo-based operation system “Naoqi“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发APP的始末">
-<meta property="og:url" content="http://ziqiany.com/art/2016/to develop an App.html">
-<meta property="og:site_name" content="Ziqiany">
-<meta property="og:description" content="很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！
-倘生活真是如此，便也无甚欢乐可言，自然不可谓之生活，只能算作日子罢了。
-常挂嘴边一句话，意外之中总有惊喜。如果说生活总会被我们看似狗血的剧情所包裹，那么我选择从无到有去做一款图书馆的App应该算是其中一个。">
-<meta property="og:updated_time" content="2016-10-22T01:56:09.320Z">
+<meta property="og:title" content="NaoController deployment with webpy">
+<meta property="og:url" content="http://ziqiany.com/art/2016-05/deploy the Nao Controller Server.html">
+<meta property="og:site_name" content="八田贝">
+<meta property="og:description" content="Nao robot , is deployed on a Centoo-based operation system “Naoqi“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now,">
+<meta property="og:updated_time" content="2016-05-25T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开发APP的始末">
-<meta name="twitter:description" content="很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！
-倘生活真是如此，便也无甚欢乐可言，自然不可谓之生活，只能算作日子罢了。
-常挂嘴边一句话，意外之中总有惊喜。如果说生活总会被我们看似狗血的剧情所包裹，那么我选择从无到有去做一款图书馆的App应该算是其中一个。">
+<meta name="twitter:title" content="NaoController deployment with webpy">
+<meta name="twitter:description" content="Nao robot , is deployed on a Centoo-based operation system “Naoqi“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now,">
 
 
 
@@ -125,12 +119,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"post"},
+    sidebar: {"position":"right","display":"hide"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: 'Freddy'
     }
   };
 </script>
@@ -138,12 +132,12 @@
 
 
 
-  <link rel="canonical" href="http://ziqiany.com/art/2016/to develop an App.html"/>
+  <link rel="canonical" href="http://ziqiany.com/art/2016-05/deploy the Nao Controller Server.html"/>
 
-  <title> 开发APP的始末 | Ziqiany </title>
+  <title> NaoController deployment with webpy | 八田贝 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -171,7 +165,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Ziqiany</span>
+      <span class="site-title">八田贝</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -198,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -208,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -250,7 +244,7 @@
             
             
               
-                开发APP的始末
+                NaoController deployment with webpy
               
             
           </h1>
@@ -261,15 +255,22 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-02-15T08:00:00+08:00" content="2016-02-15">
-              2016-02-15
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-25T00:00:00+08:00" content="2016-05-25">
+              2016-05-25
             </time>
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/art/2016-05/deploy the Nao Controller Server.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="art/2016-05/deploy the Nao Controller Server.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -290,19 +291,11 @@
       
 
       
-        <p>很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！</p>
-<p>倘生活真是如此，便也无甚欢乐可言，自然不可谓之生活，只能算作日子罢了。</p>
-<p>常挂嘴边一句话，<code>意外之中总有惊喜</code>。如果说生活总会被我们看似狗血的剧情所包裹，那么我选择从无到有去做一款图书馆的App应该算是其中一个。</p>
+        <p><strong>Nao robot</strong> , is deployed on a Centoo-based operation system “<strong><em>Naoqi</em></strong>“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now, let us see how to do that with <strong><em>python</em></strong> and <strong><em>webpy</em></strong>. </p>
 <a id="more"></a>
-<p>之所以想着去做一款APP是竟然因为对现实图书馆搜索糟糕体验的不满，出离愤怒之后的热血和冷静的交锋最终驱使我走上了Android开发这条路。这一点是我以前从来未曾想过的。</p>
-<h2 id="始料未及的开始"><a href="#始料未及的开始" class="headerlink" title="始料未及的开始"></a>始料未及的开始</h2><p>如果说每一段生活都会被刻上一些以外的印记，这无疑是我对这句话深信不疑的一个开始。一个平常的再平常不过的日子里，看到学校官网打着大大的标题——“互联网+校园”APP开发大赛，心中一丝悸动，随手转发到了群里，附上一句“我们去吐槽食堂吧”，就是这样一句毫不相干的随口一说，引来了<code>W.Ce</code>的回复，于是踏上了这条神奇的道路， 越走越远， 以至于后来的生活全都跟着改变了。</p>
-<h2 id="最忙碌的日子"><a href="#最忙碌的日子" class="headerlink" title="最忙碌的日子"></a>最忙碌的日子</h2><p>同以往的各种热血经历一样，就这样开始的Android之路也并不是那么顺利。</p>
-<p>一个学机械出身的家伙，怀着学C语言时的热情，一路接触过C++，C#，VB，到后来看过Java，学过Python，不过都只是皮毛，除了毕业设计写过一个算例的WTF，其他都是纸上谈兵而已。曾经在接触到SolidWorks之后，觉得泰太过无聊便看起了VB，幻想着从此成为SolidWorks二次开发的大神；接触微机的时候，也期待成为编写机器人源代码的创世纪者，企图用代码创建一个虚拟的对象，用COU模拟出整个的花花世界。这样的例子貌似数不胜数，尽管奇葩各异，但都有一个相同点：一切都最终落空了。</p>
-<p>可是这一次不一样，我告诉自己。</p>
-<p>一开始什么都不会，自己不得不各种扒论坛翻资料，从Android的基本框架看起，对着各大网站的视频教程，亦步亦趋，从写简单的界面开始，然后学会真机调试，现在觉得再简单不过的事情，在当初看来好像都是辣么的令人兴奋。考虑到跟队友的协同开发，于是学会了是有那个github，因为github实际上是个linux的远程仓库，顺便学会了linux的基础，没事也能拿来刷一刷，或者耍一耍也都是可以的。然后喜欢上了开源，就连自己应用的原型也是从github上的开源项目中借鉴过来，慢慢在心中搭建起了一个应用的框架。由于TC的Net被Q，以至于想去google上找东西的时候，顺便学会了FQ，从此可以轻易去外网找到自己想要的东西，也算又是一桩收获。</p>
-<h2 id="似乎美好的结局"><a href="#似乎美好的结局" class="headerlink" title="似乎美好的结局"></a>似乎美好的结局</h2><p>从最初的源码、书籍、视频、论坛，一步一步走过来，竟也最终做了一款App出来。最后竟然还拿了个一等奖，够小伙伴们乐呵乐呵的了。</p>
-<p>多少个日日夜夜，打乱了我原本费了九牛二虎之力调整过来的作息规律。</p>
-<p>可是，我却开始爱上了这种生活。</p>
+<p>To get it convenient to make Nao move and interact with other people, we need to crate a easy-use application, where we can access from many other device. So I chose to make it a web server deployed on Nao’s Head, so that I can access it once the robot operation is running.</p>
+<p>First, I need a web struct. After comparing some most-used web server structure, I chose <strong>webpy</strong>, cause its simply development. </p>
+<p>Then, I deployed the server on Nao’s operation device. And add the service to auto startup list, so that it can auto run once the robot start its service.</p>
 
       
     </div>
@@ -316,6 +309,22 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>打赏不如交个朋友</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Freddy WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -324,7 +333,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/dailylife/" rel="tag">#dailylife</a>
+            <a href="/tags/nao/" rel="tag">#nao</a>
           
             <a href="/tags/app/" rel="tag">#app</a>
           
@@ -335,16 +344,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/art/2016/you feel lost.html" rel="next" title="迷失，选择与改变">
-                <i class="fa fa-chevron-left"></i> 迷失，选择与改变
+              <a href="/art/2016-05/Nao Control Center Manual.html" rel="next" title="Nao网络控制台使用指南">
+                <i class="fa fa-chevron-left"></i> Nao网络控制台使用指南
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/art/2016/python resources collection.html" rel="prev" title="python resources collection">
-                python resources collection <i class="fa fa-chevron-right"></i>
+              <a href="/art/2016-06/MLND_P0_Titanic_Survival_Exploration.html" rel="prev" title="MLND_P0 Titanic Survival Exploration">
+                MLND_P0 Titanic Survival Exploration <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -360,6 +369,25 @@
 
     <div class="post-spread">
       
+        <div class="ds-share flat" data-thread-key="art/2016-05/deploy the Nao Controller Server.html"
+     data-title="NaoController deployment with webpy"
+     data-content=""
+     data-url="http://ziqiany.com/art/2016-05/deploy the Nao Controller Server.html">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
     </div>
   </div>
 
@@ -370,6 +398,10 @@
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="art/2016-05/deploy the Nao Controller Server.html"
+           data-title="NaoController deployment with webpy" data-url="http://ziqiany.com/art/2016-05/deploy the Nao Controller Server.html">
+      </div>
     
   </div>
 
@@ -394,10 +426,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            概览
           </li>
         </ul>
       
@@ -413,8 +445,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -423,8 +455,8 @@
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">22</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -446,11 +478,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://geekie.cc/" target="_blank" title="Geekie">
+                <a href="http://www.jianshu.com/u/b08df9e2410f" target="_blank" title="简书">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  Geekie
+                  简书
                 </a>
               </span>
             
@@ -472,7 +504,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#始料未及的开始"><span class="nav-text">始料未及的开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最忙碌的日子"><span class="nav-text">最忙碌的日子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#似乎美好的结局"><span class="nav-text">似乎美好的结局</span></a></li></ol></div>
+              <p class="post-toc-empty">此文未划分目录</p>
             
           </div>
         </section>
@@ -491,7 +523,7 @@
         <div class="copyright" >
   
   &copy;  2015 - 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -499,11 +531,11 @@
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
@@ -593,9 +625,28 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"ziqiany"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+  
+
+
 
 
 
