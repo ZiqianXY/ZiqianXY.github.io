@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>八田贝</title>
+  <subtitle>星辰大海 如约而至</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ziqianxy.github.io/"/>
+  <updated>2017-02-28T06:26:46.021Z</updated>
+  <id>http://ziqianxy.github.io/</id>
+  
+  <author>
+    <name>Freddy</name>
+    <email>ziqiany@163.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>10天100小时学数据科学 [转]</title>
+    <link href="http://ziqianxy.github.io/art/2016-07/learning-data-science-within-10-days.html"/>
+    <id>http://ziqianxy.github.io/art/2016-07/learning-data-science-within-10-days.html</id>
+    <published>2016-07-15T16:00:00.000Z</published>
+    <updated>2017-02-28T06:26:46.021Z</updated>
+    
+    <content type="html"><![CDATA[<p>有位网友在 Quora 提问，并补充说「我有10天空闲时间，每天想花十个小时学习数据科学入门知识，应该学点什么呢？」</p>
+<p>以下内容摘编了 <code>Roman Trusov</code> 的回复，并由 <code>XiaoxiaoLi</code> 翻译，非常值得新手参考。</p>
+<a id="more"></a>
+<p>不是谁都有像你这样的机会的。10天100小时的学习时间里应该分配给尽量多样化的知识。这也算是一大笔投资，所以应当严肃对待，根据学出来的结果可以把拿到实习 offer 之类的当做目标。</p>
+<p>说实话，我不觉得学习在线课程对你这次的学习有什么用，上课也不过就能给你点成就感罢了。如果你有不错的数学和编程基础，那么直接上手写代码、跑数据、看结果，比上在线课程有意思得多。那可是一百个小时呀！如果你真能在接下来十天的一百个小时里尽自己最大的努力学习，就能学到世界级专家所需知识的百分之一。时间紧任务重，你，准备好了嘛？</p>
+<p>库和算法的内部实现之类的将来有得是时间学，你现在还用不上。我下面列出的任务量巨大，需要你全身心投入，目标是让你能够广泛地接触到这个领域的一些主要工具。</p>
+<h2 id="第一、二天"><a href="#第一、二天" class="headerlink" title="第一、二天"></a>第一、二天</h2><p>下载 StackExchange 的公开数据：<a href="https://archive.org/details/stackexchange" target="_blank" rel="external">下载链接</a> （需梯子）</p>
+<p>处理数据需要关系数据库管理系统，第一天大概要干这些：</p>
+<p>安装 MySQL 配置好后把上面下载的数据导入数据库<br>阅读 SQL 基础知识。花点时间做几个小练习题来熟悉数据操作。比如说，写个能够抽取所有满足下面条件的提问的脚本：提问是关于 Python 和 SQL的、回答多于三个、最佳回答的作者在这两个主题下拥有大于十个被选中的回答。你有可能会发现脚本性能有问题。<br>阅读 SQL 索引知识，了解哈希和排序等。修改上面的脚本让它能立刻马上跑出结果。<br>写个能处理上面查询语句的 Python 类。这就需要学习 Python MySQL driver。你需要一个工具，能帮助你从数据库中抽取数据并且能把它们以比较方便的形式呈现出来。</p>
+<p>虽不清楚题主底子怎么样，但我觉得上面的任务即使对菜鸟来说也是完全能够完成的。你只要有些基础的 Python 知识就足够了。</p>
+<p>第二天可以用来了解用 pandas 来读取数据，以及用 numpy 来对数值型数据进行操作。这些库的文档看起来页数多很吓人，但不用都读。只要学会导入 CSV 文件、添加提取数据列、合并两个数据库这些操作就行了。</p>
+<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><p>虽然实际工作中通常都是在整个数据库上做查询，但学习如何在小量级的数据做操作并且得到有意义的结果也是相当重要的。比如说，可以试着从整个数据集中自己随机抽取一些数据，然后把它们的得分的分布和整个数据集上的得分分布做比较。</p>
+<p>现在可以再进一步了。虽然手握整个 Stack Exchange 的数据库，但是因为我对 StackOverflow 里面的数据比较熟悉一点，下面只会用到 StackOverflow 的数据。我能想到的一个有意思的练习：根据时间看编程语言的流行程度。</p>
+<p>为什么这个练习有用呢？</p>
+<p>如何抽取与仅仅编程语言本身有关的提问而不抽取只与技术有关的提问呢？（比如我想要和 Python 语法有关的提问，而不想要那种问如何在 Django 中用 MangoDB 的提问）<br>提问的标签数量非常大，为了最后将结果可视化需要谨慎挑选输入数据<br>可以学习到至少一个可视化框架<br>可以生成很多美图</p>
+<p>会做上面的例子，自然而然就可以探寻更多数据里有意思的属性了。学会问问题是一个很重要的能力。</p>
+<h2 id="第四、五天"><a href="#第四、五天" class="headerlink" title="第四、五天"></a>第四、五天</h2><p>数据科学家曾被评为“21 世纪最性感的职业”。你知道还有什么很性感么？图论哦！</p>
+<p>问题标签之间是如何联系在一起的？是否能仅仅用 Stack Overflow 上的回答就构建一个和技术有关的图？该选哪个标准来计算两个标签有多相似？图的可视化该如何做？试 Gephi 了吗？</p>
+<p>都做好了之后，需要给上面生成的图添加描述。仅仅一张图本身能提供的价值有限，你需要一直盯着它看，直到理解它背后所代表的意义。</p>
+<p>学习聚类算法 （至少要学 k-means 和 DBSCAN）和 K 近邻算法。要是愿意钻研的话，还可以试试各种图论算法，算图的各项指标。建议使用 networkx 这个库和 scikit-learn 库里的一些相关部分，这些库能大大简化任务的难度。</p>
+<p>做这个有什么用？</p>
+<p>可以接触到不同格式的数据，比如 CSV， GEPHI， 边的集合等。<br>K-means 是一个有用的算法，学了不吃亏，以后用得上<br>研究数据的时候，发掘有意义的聚类是最重要的任务之一</p>
+<p>可以根据自己的情况在这两天之中分配任务。我会推荐头一天玩玩 networkx 和 Gephi。第二天我会做聚类分析，因为做聚类的时候会有一些有挑战的问题，比如你需要思考：到底该用怎样的向量来表示问题标签才能保留它们之间的距离呢？！</p>
+<h2 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h2><p>到了第六天应该已经基本明白数据库部分了。然而文本还没有接触过，只会算字数不算（此处有冷冷的一语双关）。</p>
+<p>今天应该用来简单学点文本分析。学学潜在语义索引就够了，所有需要的东西在 scikit-learn 库里都有，还需要用一些 SQL。一般的流程是：</p>
+<p>选出想用的数据<br>用 scikit 来抽取文本特征 （建议用 scikit 里的 TF-IDF Vectorizer）<br>给文本加标签。你可以做一个简单的练习：根据回答的文本来预测它会得多少分。这里文本的得分就是它的标签，TF-IDF 可以作为特征向量。</p>
+<p>最好是能用 numpy 格式来为每个假设准备一个数据集。比如：</p>
+<p>一个用来预测回答的得分<br>对回答按主题分类 （可以选择二十种编程语言的一些回答作为样本）</p>
+<p>一定要注意搜集到的数据集要清理干净，你要确切地知道里面都有些什么。说起来简单做起来难。</p>
+<h2 id="第七、八、九天"><a href="#第七、八、九天" class="headerlink" title="第七、八、九天"></a>第七、八、九天</h2><p>前一天中已经得到了干净的数据集。假设一个用于分类一个用于预测（在第五天时已经学过它们的区别了）。在这几天（译者注：原文写的第五天应是笔误）该集中学习回归模型了。scikit 库里提供了很全面的工具。应该上手试试下面提到的方法里至少三种：</p>
+<ol>
+<li>线性模型。线性模型的种类浩如烟海。首先要比较它们的性能，然后读读最好的线性模型的相关知识，了解不同模型的区别。提示：好好学学 ElasticNet 回归。如果你数学还行的话可以读读 Bishop的《模式识别与机器学习》一书。书里很好地讲解了ElasticNet 回归模型好用的原因。如果没时间的话可以不看。</li>
+<li>回归树。</li>
+<li>KNN 回归。KNN 通常很好用，不要瞧不起这些简单的方法。</li>
+<li>集成学习模型如随机森林和自适应增强学习。</li>
+</ol>
+<p>学习的主要目标并不是立刻变成这些算法的专家，而应该先跑起来代码，好用了之后然后再问问题。</p>
+<p>同样的方法也适用于分类问题。思考应该用什么指标才能衡量结果的好坏。假设要建立一个给新闻排序的智能信息平台，该如何评估它的好坏呢？</p>
+<p>对所有的模型做交叉验证是必不可少的。阅读 k 折（k-fold）交叉验证有关内容，研究如何用 scikit 来做 k 折交叉验证，然后对所有你之前建立过的模型都做一遍交叉验证。</p>
+<h2 id="第十天"><a href="#第十天" class="headerlink" title="第十天"></a>第十天</h2><p>既然你想做一个数据科学家，这次经历不能落下它最有意思的部分，那就是展示结果。</p>
+<p>无论你想选什么样的形式来展示它们都无所谓（将来很难有这样自由选择展示形式的机会了）。无论是半学术论文形式、PPT 展示、博客文章，还是一个手机 app 都可以，任君选择。把你的故事分享给大家。写写你在数据集里发现了什么、都做了些什么假设，分析假设能否成立的原因、简单描述下用到的算法、用简洁明了的形式来展示交叉验证的结果等，并且一定要多多放些图表。</p>
+<p>这部分无论做到什么程度都不算用力过猛。我保证，如果你真能做一个好的展示并且展示给自己的伯乐看，入门 offer 指日可待。</p>
+<blockquote>
+<p>英文：Roman Trusov<br>译文：伯乐在线专栏作者 - XiaoxiaoLi<br>链接：<a href="http://python.jobbole.com/85704/" target="_blank" rel="external">http://python.jobbole.com/85704/</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有位网友在 Quora 提问，并补充说「我有10天空闲时间，每天想花十个小时学习数据科学入门知识，应该学点什么呢？」&lt;/p&gt;
+&lt;p&gt;以下内容摘编了 &lt;code&gt;Roman Trusov&lt;/code&gt; 的回复，并由 &lt;code&gt;XiaoxiaoLi&lt;/code&gt; 翻译，非常值得新手参考。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ML" scheme="http://ziqianxy.github.io/categories/ML/"/>
+    
+    
+      <category term="data" scheme="http://ziqianxy.github.io/tags/data/"/>
+    
+      <category term="learning" scheme="http://ziqianxy.github.io/tags/learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二维码生成和解析工具</title>
+    <link href="http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python.html"/>
+    <id>http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python.html</id>
+    <published>2016-06-17T16:00:00.000Z</published>
+    <updated>2017-02-28T06:26:34.424Z</updated>
+    
+    <content type="html"><![CDATA[<p>QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。</p>
+<a id="more"></a>
+<h2 id="qrcode"><a href="#qrcode" class="headerlink" title="qrcode"></a><a href="https://pypi.python.org/pypi/qrcode" target="_blank" rel="external"><strong>qrcode</strong></a></h2><p>用于生成二维码的工具包。详情参考<a href="https://pypi.python.org/pypi/qrcode" target="_blank" rel="external">qrcode 5.3 : Python Package Index</a>，使用起来更简单，如下是示例代码：</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip <span class="keyword">install</span> qrcode</div></pre></td></tr></table></figure>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a><strong>示例代码</strong></h3><p>一般用法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qrcode </div><div class="line">img = qrcode.make(<span class="string">'hello world'</span>)</div><div class="line">img.save(<span class="string">'test.png'</span>)</div></pre></td></tr></table></figure></p>
+<p>高级用法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qrcode </div><div class="line">qr = qrcode.QRCode(     </div><div class="line">    version=<span class="number">1</span>,     </div><div class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,     </div><div class="line">    box_size=<span class="number">10</span>,     </div><div class="line">    border=<span class="number">4</span>, </div><div class="line">) </div><div class="line">qr.add_data(<span class="string">'this is a new qrcode'</span>) </div><div class="line">qr.make(fit=<span class="keyword">True</span>)  </div><div class="line">img = qr.make_image()</div><div class="line">img.save(<span class="string">'test.png'</span>)</div></pre></td></tr></table></figure>
+<h2 id="zbar"><a href="#zbar" class="headerlink" title="zbar "></a><a href="https://pypi.python.org/pypi/zbar" target="_blank" rel="external"><strong>zbar </strong></a></h2><p>用于解析图像和视频中二维码的工具包。详情参考<a href="http://zbar.sourceforge.net/index.html" target="_blank" rel="external">ZBar bar code reader</a>。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>由于官方的包最高完美支持到python2.6，而主流python版本用的是2.7，windows下这里有一个2.7的msi，来源不详</p>
+<h3 id="示例代码-1"><a href="#示例代码-1" class="headerlink" title="示例代码"></a><strong>示例代码</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line"><span class="keyword">import</span> zbar</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_QR</span> <span class="params">(imgPath)</span>:</span></div><div class="line">    scanner = zbar.ImageScanner()</div><div class="line">    scanner.parse_config(<span class="string">"enable"</span>)</div><div class="line">    pil = Image.open(imgPath).convert(<span class="string">'L'</span>)</div><div class="line">    width, height = pil.size</div><div class="line">    raw = pil.tobytes()</div><div class="line">    image = zbar.Image(width, height, <span class="string">'Y800'</span>, raw)</div><div class="line">    scanner.scan(image)</div><div class="line">    data = <span class="string">''</span></div><div class="line">    <span class="keyword">for</span> symbol <span class="keyword">in</span> image:</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            data += symbol.data.decode(<span class="string">'utf-8'</span>).encode(<span class="string">'sjis'</span>).decode(<span class="string">'utf-8'</span>)</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            data += symbol.data</div><div class="line">    <span class="keyword">del</span>(image)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> data:</div><div class="line">        data += <span class="string">'Nan'</span></div><div class="line">    <span class="keyword">return</span> data</div><div class="line"></div><div class="line">img = <span class="string">'images/barcode_01.jpg'</span></div><div class="line">qrdata= get_QR(img)</div><div class="line"><span class="keyword">print</span> <span class="string">'[DATA]'</span>, qrdata</div></pre></td></tr></table></figure>
+<h3 id="中文乱码解决"><a href="#中文乱码解决" class="headerlink" title="中文乱码解决"></a><strong>中文乱码解决</strong></h3><p>由于编码问题（参考：<a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386819196283586a37629844456ca7e5a7faa9b94ee8000" target="_blank" rel="external">字符串和编码 - 廖雪峰</a>），默认unicode编码，所以如果不进行处理，通常会有中文乱码产生，以下为处理方式，经测试ok</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">try</span>:</div><div class="line">	<span class="class"><span class="keyword">data</span> += symbol.<span class="keyword">data</span>.decode('<span class="title">utf</span>-8').encode('<span class="title">sjis'</span>).decode('<span class="title">utf</span>-8')</span></div><div class="line"><span class="title">except</span>:</div><div class="line">	<span class="class"><span class="keyword">data</span> += symbol.<span class="keyword">data</span></span></div></pre></td></tr></table></figure>
+<p>以上简单操作即完成QR-Code的生成和解析工作，不过解析的正确率有待验证，特别是扭曲变形或者背景稍混乱的图片，有可能部分识别错误或者无法识别。</p>
+<h2 id="Zxing-Zbar"><a href="#Zxing-Zbar" class="headerlink" title="Zxing+Zbar"></a><strong>Zxing+Zbar</strong></h2><p>另外几篇关于Zxing源码的分析，以及Android下整合Zxing和zbar的文章</p>
+<blockquote>
+<ol>
+<li><a href="http://www.lai18.com/content/1012109.html" target="_blank" rel="external">秒杀主流应用的二维码扫描</a></li>
+<li><a href="http://kuangjianwei.blog.163.com/blog/static/190088953201361015055110/" target="_blank" rel="external">zxing源码分析——QR码部分</a></li>
+<li><a href="http://kuangjianwei.blog.163.com/blog/static/1900889532013612103136888/" target="_blank" rel="external">zxing源码分析——DataMatrix码部分</a></li>
+</ol>
+</blockquote>
+<hr>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/categories/dev/"/>
+    
+    
+      <category term="app" scheme="http://ziqianxy.github.io/tags/app/"/>
+    
+      <category term="python" scheme="http://ziqianxy.github.io/tags/python/"/>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/tags/dev/"/>
+    
+      <category term="qrcode" scheme="http://ziqianxy.github.io/tags/qrcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NaoController deployment with webpy</title>
+    <link href="http://ziqianxy.github.io/art/2016-05/nao-deploy.html"/>
+    <id>http://ziqianxy.github.io/art/2016-05/nao-deploy.html</id>
+    <published>2016-05-24T16:00:00.000Z</published>
+    <updated>2016-05-25T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Nao robot</strong> , is deployed on a Centoo-based operation system “<strong><em>Naoqi</em></strong>“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now, let us see how to do that with <strong><em>python</em></strong> and <strong><em>webpy</em></strong>. </p>
+<a id="more"></a>
+<p>To get it convenient to make Nao move and interact with other people, we need to crate a easy-use application, where we can access from many other device. So I chose to make it a web server deployed on Nao’s Head, so that I can access it once the robot operation is running.</p>
+<p>First, I need a web struct. After comparing some most-used web server structure, I chose <strong>webpy</strong>, cause its simply development. </p>
+<p>Then, I deployed the server on Nao’s operation device. And add the service to auto startup list, so that it can auto run once the robot start its service.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;Nao robot&lt;/strong&gt; , is deployed on a Centoo-based operation system “&lt;strong&gt;&lt;em&gt;Naoqi&lt;/em&gt;&lt;/strong&gt;“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now, let us see how to do that with &lt;strong&gt;&lt;em&gt;python&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;webpy&lt;/em&gt;&lt;/strong&gt;. &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/categories/dev/"/>
+    
+    
+      <category term="nao" scheme="http://ziqianxy.github.io/tags/nao/"/>
+    
+      <category term="app" scheme="http://ziqianxy.github.io/tags/app/"/>
+    
+      <category term="python" scheme="http://ziqianxy.github.io/tags/python/"/>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/tags/dev/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nao网络控制台使用指南</title>
+    <link href="http://ziqianxy.github.io/art/2016-05/nao-manual.html"/>
+    <id>http://ziqianxy.github.io/art/2016-05/nao-manual.html</id>
+    <published>2016-05-22T16:00:00.000Z</published>
+    <updated>2017-02-28T06:26:31.980Z</updated>
+    
+    <content type="html"><![CDATA[<p>NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。</p>
+<a id="more"></a>
+<h2 id="一、-连接步骤"><a href="#一、-连接步骤" class="headerlink" title="一、 连接步骤"></a><strong>一、 连接步骤</strong></h2><p>浏览器客户端只需在使用时访问对应局域网链接即可，具体步骤如下详述：</p>
+<h3 id="1-建立热点"><a href="#1-建立热点" class="headerlink" title="1.    建立热点"></a>1.    <strong>建立热点</strong></h3><p>打开Nao机器人之前，请使用手机或其他设备开启一个热点，并修改热点名称和密码分别为Nao已经连接过的网络即可，以便机器人开机能够自动连接到此局域网络，否则后续连接操作将无法进行。 </p>
+<h3 id="2-启动Nao机器人"><a href="#2-启动Nao机器人" class="headerlink" title="2.    启动Nao机器人"></a>2.    <strong>启动Nao机器人</strong></h3><p>短暂按下Nao胸部按钮，指示灯将亮起，启动Nao机器人，等待3-5分钟不等，待机器人发出“looking for connected … ”的声音后，即表示完成启动。正常启动后，一般机器人会自动站立。</p>
+<h3 id="3-获取ip，访问控制台"><a href="#3-获取ip，访问控制台" class="headerlink" title="3.    获取ip，访问控制台"></a>3.    <strong>获取ip，访问控制台</strong></h3><p>再次短暂按下Nao胸部按钮，Nao将会告知服务器地址，记下这个ip (例如，192.168.1.107)，然后用任意连接至此热点的设备访问1111端口，具体操作为：打开浏览器，访问链接[ ip:1111 ] (注意，冒号必须是英文符号，例如，192.168.1.107:1111)，以上操作无误即可进入如下控制台界面。</p>
+<p> <img src="images/NaoControlCenter.jpg" alt="Nao Control Center UI"></p>
+<h2 id="二、-控制台使用说明"><a href="#二、-控制台使用说明" class="headerlink" title="二、 控制台使用说明"></a><strong>二、 控制台使用说明</strong></h2><p>控制台主要提供了基本的运动和简易交互控制功能，主要包括：移动（前后左右）、舞蹈、模仿、对话、休息、电源等功能。</p>
+<h3 id="1-移动"><a href="#1-移动" class="headerlink" title="1. 移动"></a>1. 移动</h3><p><strong>[^] [v] [&lt;] [&gt;]</strong><br>分别对应前进、后退、左转90度、右转90度。方向为机器人参考方向。前进和后退会同时 [加/减10%音量]，可根据需要执行相应操作。<br><strong>[StandUp] [SitDown]  </strong><br>站立/坐下。如果机器人当前不在该状态，将执行对应动作，否则无响应。</p>
+<h3 id="2-舞蹈"><a href="#2-舞蹈" class="headerlink" title="2. 舞蹈"></a>2. 舞蹈</h3><p><strong>[GangnamStyle] [JazzDance] [TaiChi]  </strong><br>分别对应 “江南style”“爵士舞”“太极”。舞蹈时间较长，期间建议不要点击 [Stop] 终止操作，有可能造成机器人摔倒。</p>
+<h3 id="3-模仿"><a href="#3-模仿" class="headerlink" title="3. 模仿"></a>3. 模仿</h3><p><strong>[Drive] [TakePhoto]</strong><br>分别对应“开车”和“拍照”模仿动作。同上，不要在运动中终止操作。</p>
+<h3 id="4-对话"><a href="#4-对话" class="headerlink" title="4. 对话"></a>4. 对话</h3><p><strong>[Chat]</strong><br>启动对话模式，可与机器人进行对话，并可根据机器人提示说明，通过对话控制相关动作。目前版本的中文识别效果不佳，不推荐使用。</p>
+<h3 id="5-休息"><a href="#5-休息" class="headerlink" title="5.    休息"></a>5.    休息</h3><p><strong>[Sleep]</strong><br>当长时间开启时，机器人关节和CPU会发热，如果散热条件不好会造成局部过热，此时可通过此操作将各关节电机卸载，缓解过热问题。</p>
+<h3 id="6-电源"><a href="#6-电源" class="headerlink" title="6.    电源"></a>6.    电源</h3><p><strong>[PowerOff]</strong><br>执行关机操作，机器人将复位关机。</p>
+<h2 id="三、-特别说明："><a href="#三、-特别说明：" class="headerlink" title="三、 特别说明："></a><strong>三、 特别说明：</strong></h2><ol>
+<li>由于采用远程控制方式，实际操作会有一定延时，一个动作未结束时，建议不要多次点击其他动作，有可能造成后续动作紊乱。</li>
+<li>机器人自平衡能力有限，仅限在平面硬地板上完成动作，以免造成意外跌落损坏。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/categories/dev/"/>
+    
+    
+      <category term="nao" scheme="http://ziqianxy.github.io/tags/nao/"/>
+    
+      <category term="app" scheme="http://ziqianxy.github.io/tags/app/"/>
+    
+      <category term="python" scheme="http://ziqianxy.github.io/tags/python/"/>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/tags/dev/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python resources collection</title>
+    <link href="http://ziqianxy.github.io/art/2016-04/manual-python.html"/>
+    <id>http://ziqianxy.github.io/art/2016-04/manual-python.html</id>
+    <published>2016-04-09T16:00:00.000Z</published>
+    <updated>2017-02-28T06:26:43.525Z</updated>
+    
+    <content type="html"><![CDATA[<p>here is some python resources collection</p>
+<a id="more"></a>
+<blockquote>
+<ol>
+<li><p><a href="http://python.swaroopch.com/" target="_blank" rel="external">Introduction · A Byte of Python</a></p>
+</li>
+<li><p><a href="http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/" target="_blank" rel="external">Python风格规范 — Google 开源项目风格指南</a></p>
+</li>
+<li><p><a href="http://www.fullstackpython.com/" target="_blank" rel="external">Full Stack Python</a></p>
+</li>
+<li><p><a href="https://segmentfault.com/t/python" target="_blank" rel="external">老齐Py-python - 问题 - SegmentFault</a></p>
+</li>
+</ol>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;here is some python resources collection&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="manual" scheme="http://ziqianxy.github.io/categories/manual/"/>
+    
+    
+      <category term="python" scheme="http://ziqianxy.github.io/tags/python/"/>
+    
+      <category term="manual" scheme="http://ziqianxy.github.io/tags/manual/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发APP的始末</title>
+    <link href="http://ziqianxy.github.io/art/2016-02/app-wanjuanwu.html"/>
+    <id>http://ziqianxy.github.io/art/2016-02/app-wanjuanwu.html</id>
+    <published>2016-02-14T16:00:00.000Z</published>
+    <updated>2017-02-28T06:26:24.748Z</updated>
+    
+    <content type="html"><![CDATA[<p>很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！</p>
+<p>倘生活真是如此，便也无甚欢乐可言，自然不可谓之生活，只能算作日子罢了。</p>
+<p>常挂嘴边一句话，<code>意外之中总有惊喜</code>。如果说生活总会被我们看似狗血的剧情所包裹，那么我选择从无到有去做一款图书馆的App应该算是其中一个。</p>
+<a id="more"></a>
+<p>之所以想着去做一款APP是竟然因为对现实图书馆搜索糟糕体验的不满，出离愤怒之后的热血和冷静的交锋最终驱使我走上了Android开发这条路。这一点是我以前从来未曾想过的。</p>
+<h2 id="始料未及的开始"><a href="#始料未及的开始" class="headerlink" title="始料未及的开始"></a>始料未及的开始</h2><p>如果说每一段生活都会被刻上一些以外的印记，这无疑是我对这句话深信不疑的一个开始。一个平常的再平常不过的日子里，看到学校官网打着大大的标题——“互联网+校园”APP开发大赛，心中一丝悸动，随手转发到了群里，附上一句“我们去吐槽食堂吧”，就是这样一句毫不相干的随口一说，引来了<code>W.Ce</code>的回复，于是踏上了这条神奇的道路， 越走越远， 以至于后来的生活全都跟着改变了。</p>
+<h2 id="最忙碌的日子"><a href="#最忙碌的日子" class="headerlink" title="最忙碌的日子"></a>最忙碌的日子</h2><p>同以往的各种热血经历一样，就这样开始的Android之路也并不是那么顺利。</p>
+<p>一个学机械出身的家伙，怀着学C语言时的热情，一路接触过C++，C#，VB，到后来看过Java，学过Python，不过都只是皮毛，除了毕业设计写过一个算例的WTF，其他都是纸上谈兵而已。曾经在接触到SolidWorks之后，觉得泰太过无聊便看起了VB，幻想着从此成为SolidWorks二次开发的大神；接触微机的时候，也期待成为编写机器人源代码的创世纪者，企图用代码创建一个虚拟的对象，用COU模拟出整个的花花世界。这样的例子貌似数不胜数，尽管奇葩各异，但都有一个相同点：一切都最终落空了。</p>
+<p>可是这一次不一样，我告诉自己。</p>
+<p>一开始什么都不会，自己不得不各种扒论坛翻资料，从Android的基本框架看起，对着各大网站的视频教程，亦步亦趋，从写简单的界面开始，然后学会真机调试，现在觉得再简单不过的事情，在当初看来好像都是辣么的令人兴奋。考虑到跟队友的协同开发，于是学会了是有那个github，因为github实际上是个linux的远程仓库，顺便学会了linux的基础，没事也能拿来刷一刷，或者耍一耍也都是可以的。然后喜欢上了开源，就连自己应用的原型也是从github上的开源项目中借鉴过来，慢慢在心中搭建起了一个应用的框架。由于TC的Net被Q，以至于想去google上找东西的时候，顺便学会了FQ，从此可以轻易去外网找到自己想要的东西，也算又是一桩收获。</p>
+<h2 id="似乎美好的结局"><a href="#似乎美好的结局" class="headerlink" title="似乎美好的结局"></a>似乎美好的结局</h2><p>从最初的源码、书籍、视频、论坛，一步一步走过来，竟也最终做了一款App出来。最后竟然还拿了个一等奖，够小伙伴们乐呵乐呵的了。</p>
+<p>多少个日日夜夜，打乱了我原本费了九牛二虎之力调整过来的作息规律。</p>
+<p>可是，我却开始爱上了这种生活。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！&lt;/p&gt;
+&lt;p&gt;倘生活真是如此，便也无甚欢乐可言，自然不可谓之生活，只能算作日子罢了。&lt;/p&gt;
+&lt;p&gt;常挂嘴边一句话，&lt;code&gt;意外之中总有惊喜&lt;/code&gt;。如果说生活总会被我们看似狗血的剧情所包裹，那么我选择从无到有去做一款图书馆的App应该算是其中一个。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/categories/dev/"/>
+    
+    
+      <category term="nao" scheme="http://ziqianxy.github.io/tags/nao/"/>
+    
+      <category term="app" scheme="http://ziqianxy.github.io/tags/app/"/>
+    
+      <category term="python" scheme="http://ziqianxy.github.io/tags/python/"/>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/tags/dev/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小胡子(一)</title>
+    <link href="http://ziqianxy.github.io/art/2016-01/little-beard-01.html"/>
+    <id>http://ziqianxy.github.io/art/2016-01/little-beard-01.html</id>
+    <published>2016-01-19T16:00:00.000Z</published>
+    <updated>2017-02-28T06:26:37.697Z</updated>
+    
+    <content type="html"><![CDATA[<p>对，就是那一撮。别人都叫我<code>小胡子</code>。</p>
+<p>我天生有一种本领，不生不死。这是我很早就知道的。</p>
+<p>我也天生难逃宿命，终难迎风飘扬。尽管这是我后来才知道的。</p>
+<a id="more"></a>
+<p>很久以前，当我还很小的时候，总是被一堆软软的东西包裹着。只见得头顶上有时候会有柔柔的红光照进来，当我第一次见到这种情景的时候，我并不知道那是什么，直到后来发现头顶上总是红光和黑暗交替，我才渐渐明白我生长的地方似乎本就是这样。再后来，我早已习惯如此红黑更替，就像我被包裹的环境一样，我不再关注他们。从我好奇自己周围的环境到我终于发现自己生存的环境本就是如此，大概花了我一个月的时间。</p>
+<p>在那之后，我不再惊奇于此，看着身旁不变的环境，好不无聊，便开始用睡觉打发。就这样，我安然度过了我的童年，那是一段漫长的时间，至于到底是多久，我也不知道。</p>
+<p>直到有一天，头顶忽然一下子变得异常的亮，后来我才知道是因为有一个大个子顶到了发光板（就是头上红黑交替的光板）。当我睁开长眠的双眼的时候，眼前的一切让我的好奇心一下子又复苏了。不知道在我睡觉的这阵了里，到底发生了什么，有的家伙已经冲到发光板那么高了，有的却还是那么矮，而我，则是中流大军中的一员，不上不下。</p>
+<p>于是我开始观察和思考。我每天要做的一件事就是记录自己离发光板还有多远。这段时间里，陆陆续续有家伙顶开发光板，伴随着一阵阵亮光，我开始幻想着外面的世界到底是怎样的，期盼着有一天我也能像他们那样，顶开发光板，冲上云霄。</p>
+<p>日复一日的等待，我不停的长高，终于生命里第一次看到发光板上的世界。顶开发光板的那一瞬，我的整个世界一下子全都亮了，没有了红色的光晕，取而代之的是强烈的白光。待适应了这光照之后，我开始环顾四周，这里有和我一样的小胡子兄弟，他们个头比我高很多，还有我从没见过的花花世界，不再只是单调的红色的世界。</p>
+<p>我变得兴奋起来，因为眼前这陌生的世界每天都在变化，我喜欢这种变化，相比于童年的日复一日的肉的包裹。</p>
+<p>可是，渐渐地，我又开始发现，这里一样是黑暗和白光的交替，只不过白光照耀下的世界更加五彩斑斓，偶尔还会有阵阵凉风袭过，让我不得不折弯了腰。不管每天的世界怎样变化，都逃不了这种更替。</p>
+<p>这就是我所生长的环境永恒的法则？我困惑。看着头上的大个子，还有下面追赶的小个子，我开始思考：我每天都在不断地长高，从发光板下长到发光板上，这究竟是要到哪儿去。虽然我喜欢变化的世界里每天变化的东西，但我依然摆脱不了这种困扰。我无父无母，当然也没人告诉我所有这些我想知道的。</p>
+<p>至于身边的大个子和小个子，我不知道他们有没有类似困惑。我们都是哑巴，彼此没有任何沟通和交流。我唯一知道的就是他们赶在我前面快速的生长，不知是不是因为跟我有一样的困惑，而加快步伐，以便能快点到下一个发光板上去，那样或许就能发现些什么秘密。我只知道这是我的想法。</p>
+<p>可是，我就是要弄清楚这一切！我盼着生长的更快，更高，可是我却不知道如何才能做到。我只能静静地等待，等待着下一个破板之日。我静静地等，静静地等 … …</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;对，就是那一撮。别人都叫我&lt;code&gt;小胡子&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;我天生有一种本领，不生不死。这是我很早就知道的。&lt;/p&gt;
+&lt;p&gt;我也天生难逃宿命，终难迎风飘扬。尽管这是我后来才知道的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="fred" scheme="http://ziqianxy.github.io/categories/fred/"/>
+    
+    
+      <category term="beard" scheme="http://ziqianxy.github.io/tags/beard/"/>
+    
+      <category term="fred" scheme="http://ziqianxy.github.io/tags/fred/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用Hexo搭建个人博客</title>
+    <link href="http://ziqianxy.github.io/art/2015-12/blog-setup.html"/>
+    <id>http://ziqianxy.github.io/art/2015-12/blog-setup.html</id>
+    <published>2015-12-14T16:00:00.000Z</published>
+    <updated>2017-02-28T06:25:45.679Z</updated>
+    
+    <content type="html"><![CDATA[<p>本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。</p>
+<a id="more"></a>
+<h2 id="Hexo环境搭建"><a href="#Hexo环境搭建" class="headerlink" title="Hexo环境搭建"></a>Hexo环境搭建</h2><h3 id="node-js-git-hexo"><a href="#node-js-git-hexo" class="headerlink" title="node.js, git, hexo"></a>node.js, git, hexo</h3><p>node.js, git, hexo的傻瓜式安装，参考hexo官方文档即可<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
+<h3 id="public-key"><a href="#public-key" class="headerlink" title="public-key"></a>public-key</h3><p>git的public-key的配置，参考常见问题，具体步骤为<code>查看本地是否存在public-key</code>-&gt;<code>如果没有则生成pub</code>-&gt;<code>将已有或者生成的pub添加至git的.ssh文件夹下</code>-&gt;<code>添加至github并连接</code></p>
+<blockquote>
+<p><a href="https://help.github.com/articles/checking-for-existing-ssh-keys" target="_blank" rel="external"><code>**查看本地已有的SSH keys**</code></a></p>
+</blockquote>
+<p>Before you generate an SSH key, you can check to see if you have any existing SSH keys. Enter <code>ls -al ~/.ssh</code> to see if existing SSH keys are present:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ls</span> -al ~/.ssh</div><div class="line"><span class="comment"># Lists the files in your .ssh directory, if they exist</span></div></pre></td></tr></table></figure></p>
+<p>Check the directory listing to see if you already have a public SSH key.</p>
+<ul>
+<li><p>If you don’t have an existing public and private key pair, or don’t wish to use any that are available to connect to GitHub, then generate a new SSH key.</p>
+</li>
+<li><p>If you see an existing public and private key pair listed (for example id_rsa.pub and id_rsa) that you would like to use to connect to GitHub, you can add your SSH key to the ssh-agent.</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="external"><code>**生成SSH key**</code></a></p>
+</blockquote>
+<p>After you’ve checked for existing SSH keys, you can generate a new SSH key to use for authentication, then add it to the ssh-agent.</p>
+<blockquote>
+<p><code>**添加SSH key到ssh-agent**</code>, If you have GitHub for Windows installed, you can use it to clone repositories and not deal with SSH keys. It also comes with the Git Bash tool, which is the preferred way of running git commands on Windows.</p>
+</blockquote>
+<ol>
+<li><p>Ensure ssh-agent is enabled: <strong>If you are using Git Bash</strong>, turn on ssh-agent:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># start the ssh-agent in the background</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></div><div class="line">Agent pid 59566</div></pre></td></tr></table></figure>
+</li>
+<li><p>Add your SSH key to the ssh-agent. If you used an existing SSH key rather than generating a new SSH key, you’ll need to replace id_rsa in the command with the name of your existing private key file.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/id_rsa	<span class="comment"># id_rsa为对应.pub的本地key</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Add the SSH key to your GitHub account.(next)</p>
+</li>
+</ol>
+<blockquote>
+<p><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account" target="_blank" rel="external"><code>**添加SSH key至GitHub账户**</code></a></p>
+</blockquote>
+<p>To configure your GitHub account to use your new (or existing) SSH key, you’ll also need to add it to your GitHub account.</p>
+<blockquote>
+<p><a href="https://help.github.com/articles/testing-your-ssh-connection" target="_blank" rel="external"><code>**测试SSH连接**</code></a></p>
+</blockquote>
+<p>After you’ve set up your SSH key and added it to your GitHub account, you can test your connection.<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ssh</span> -T git<span class="variable">@github</span>.com</div><div class="line"><span class="comment"># Attempts to ssh to GitHub</span></div></pre></td></tr></table></figure></p>
+<h3 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h3><p>Hexo 提供了快速方便的一键部署功能，<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> d	<span class="comment"># hexo deploy</span></div></pre></td></tr></table></figure></p>
+<p>不过需要首先安装 <code>hexo-deployer-git</code>，<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></div></pre></td></tr></table></figure></p>
+<p>然后修改配置。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">message</span>: notes-to-commit</div><div class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/username.github.io.git</div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<h3 id="hexo设置"><a href="#hexo设置" class="headerlink" title="hexo设置"></a>hexo设置</h3><p><code>主目录</code>下的_config.yml文件操作，参考hexo官方配置教程</p>
+<h2 id="hexo主题配置"><a href="#hexo主题配置" class="headerlink" title="hexo主题配置"></a>hexo主题配置</h2><p>主题的安装，比较推荐的有jacman、next, 到hexo官方主题区或者github搜索即可，相应安装只需git clone到博客目录下themes文件夹下</p>
+<p>hexo主题配置，同样的_config.yml文件操作，只不过位于<code>主题文件夹</code>下，具体参考相应主题文档</p>
+<h2 id="hexo挂件及优化"><a href="#hexo挂件及优化" class="headerlink" title="hexo挂件及优化"></a>hexo挂件及优化</h2><h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p>OK, here, I collect some useful hyperlinks for your building up a new static blog. Here we go: </p>
+<ol>
+<li><p><a href="https://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>, the core engine to translate a .md file to static webPage.</p>
+</li>
+<li><p><a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="external">MarkDown</a>, a <code>text-to-HTML</code> conversion tool for web writers. </p>
+</li>
+<li><p><a href="https://github.com" target="_blank" rel="external">GitHUb</a>, a web server to locate the blog source files, so that you can easily get a self-website without purchase for anything, just directly go to <code>username.github.io</code>. </p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/categories/dev/"/>
+    
+    
+      <category term="app" scheme="http://ziqianxy.github.io/tags/app/"/>
+    
+      <category term="dev" scheme="http://ziqianxy.github.io/tags/dev/"/>
+    
+      <category term="blog" scheme="http://ziqianxy.github.io/tags/blog/"/>
+    
+      <category term="hexo" scheme="http://ziqianxy.github.io/tags/hexo/"/>
+    
+      <category term="next" scheme="http://ziqianxy.github.io/tags/next/"/>
+    
+  </entry>
+  
+</feed>

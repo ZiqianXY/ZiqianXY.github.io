@@ -86,11 +86,13 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="app,python," />
+  <meta name="keywords" content="app,dev,blog,hexo,next," />
 
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="八田贝" type="application/atom+xml" />
 
 
 
@@ -102,16 +104,16 @@
 
 
 
-<meta name="description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
+<meta name="description" content="本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二维码生成和解析工具">
-<meta property="og:url" content="http://ziqianxy.github.io/art/2016-06/QrCode process with python.html">
+<meta property="og:title" content="用Hexo搭建个人博客">
+<meta property="og:url" content="http://ziqianxy.github.io/art/2015-12/blog-setup.html">
 <meta property="og:site_name" content="八田贝">
-<meta property="og:description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
-<meta property="og:updated_time" content="2017-01-13T11:36:49.725Z">
+<meta property="og:description" content="本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。">
+<meta property="og:updated_time" content="2017-02-28T06:25:45.679Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="二维码生成和解析工具">
-<meta name="twitter:description" content="QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。">
+<meta name="twitter:title" content="用Hexo搭建个人博客">
+<meta name="twitter:description" content="本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。">
 
 
 
@@ -132,9 +134,9 @@
 
 
 
-  <link rel="canonical" href="http://ziqianxy.github.io/art/2016-06/QrCode process with python.html"/>
+  <link rel="canonical" href="http://ziqianxy.github.io/art/2015-12/blog-setup.html"/>
 
-  <title> 二维码生成和解析工具 | 八田贝 </title>
+  <title> 用Hexo搭建个人博客 | 八田贝 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -216,12 +218,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            关于
+            标签
           </a>
         </li>
       
@@ -232,16 +234,6 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
           </a>
         </li>
       
@@ -283,7 +275,7 @@
             
             
               
-                二维码生成和解析工具
+                用Hexo搭建个人博客
               
             
           </h1>
@@ -295,19 +287,38 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T00:00:00+08:00" content="2016-06-18">
-              2016-06-18
+            <time itemprop="dateCreated" datetime="2015-12-15T00:00:00+08:00" content="2015-12-15">
+              2015-12-15
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/dev/" itemprop="url" rel="index">
+                    <span itemprop="name">dev</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/art/2016-06/QrCode process with python.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="art/2016-06/QrCode process with python.html" itemprop="commentsCount"></span>
+                <a href="/art/2015-12/blog-setup.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="art/2015-12/blog-setup.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -317,7 +328,7 @@
 
           
           
-             <span id="/art/2016-06/QrCode process with python.html" class="leancloud_visitors" data-flag-title="二维码生成和解析工具">
+             <span id="/art/2015-12/blog-setup.html" class="leancloud_visitors" data-flag-title="用Hexo搭建个人博客">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -339,28 +350,61 @@
       
 
       
-        <p>QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。</p>
+        <p>本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。</p>
 <a id="more"></a>
-<h2 id="qrcode"><a href="#qrcode" class="headerlink" title="qrcode"></a><a href="https://pypi.python.org/pypi/qrcode" target="_blank" rel="external"><strong>qrcode</strong></a></h2><p>用于生成二维码的工具包。详情参考<a href="https://pypi.python.org/pypi/qrcode" target="_blank" rel="external">qrcode 5.3 : Python Package Index</a>，使用起来更简单，如下是示例代码：</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip <span class="keyword">install</span> qrcode</div></pre></td></tr></table></figure>
-<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a><strong>示例代码</strong></h3><p>一般用法<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qrcode </div><div class="line">img = qrcode.make(<span class="string">'hello world'</span>)</div><div class="line">img.save(<span class="string">'test.png'</span>)</div></pre></td></tr></table></figure></p>
-<p>高级用法</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> qrcode </div><div class="line">qr = qrcode.QRCode(     </div><div class="line">    version=<span class="number">1</span>,     </div><div class="line">    error_correction=qrcode.constants.ERROR_CORRECT_L,     </div><div class="line">    box_size=<span class="number">10</span>,     </div><div class="line">    border=<span class="number">4</span>, </div><div class="line">) </div><div class="line">qr.add_data(<span class="string">'this is a new qrcode'</span>) </div><div class="line">qr.make(fit=<span class="keyword">True</span>)  </div><div class="line">img = qr.make_image()</div><div class="line">img.save(<span class="string">'test.png'</span>)</div></pre></td></tr></table></figure>
-<h2 id="zbar"><a href="#zbar" class="headerlink" title="zbar "></a><a href="https://pypi.python.org/pypi/zbar" target="_blank" rel="external"><strong>zbar </strong></a></h2><p>用于解析图像和视频中二维码的工具包。详情参考<a href="http://zbar.sourceforge.net/index.html" target="_blank" rel="external">ZBar bar code reader</a>。</p>
-<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>由于官方的包最高完美支持到python2.6，而主流python版本用的是2.7，windows下这里有一个2.7的msi，来源不详</p>
-<h3 id="示例代码-1"><a href="#示例代码-1" class="headerlink" title="示例代码"></a><strong>示例代码</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div><div class="line"><span class="keyword">import</span> zbar</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_QR</span> <span class="params">(imgPath)</span>:</span></div><div class="line">    scanner = zbar.ImageScanner()</div><div class="line">    scanner.parse_config(<span class="string">"enable"</span>)</div><div class="line">    pil = Image.open(imgPath).convert(<span class="string">'L'</span>)</div><div class="line">    width, height = pil.size</div><div class="line">    raw = pil.tobytes()</div><div class="line">    image = zbar.Image(width, height, <span class="string">'Y800'</span>, raw)</div><div class="line">    scanner.scan(image)</div><div class="line">    data = <span class="string">''</span></div><div class="line">    <span class="keyword">for</span> symbol <span class="keyword">in</span> image:</div><div class="line">        <span class="keyword">try</span>:</div><div class="line">            data += symbol.data.decode(<span class="string">'utf-8'</span>).encode(<span class="string">'sjis'</span>).decode(<span class="string">'utf-8'</span>)</div><div class="line">        <span class="keyword">except</span>:</div><div class="line">            data += symbol.data</div><div class="line">    <span class="keyword">del</span>(image)</div><div class="line">    <span class="keyword">if</span> <span class="keyword">not</span> data:</div><div class="line">        data += <span class="string">'Nan'</span></div><div class="line">    <span class="keyword">return</span> data</div><div class="line"></div><div class="line">img = <span class="string">'images/barcode_01.jpg'</span></div><div class="line">qrdata= get_QR(img)</div><div class="line"><span class="keyword">print</span> <span class="string">'[DATA]'</span>, qrdata</div></pre></td></tr></table></figure>
-<h3 id="中文乱码解决"><a href="#中文乱码解决" class="headerlink" title="中文乱码解决"></a><strong>中文乱码解决</strong></h3><p>由于编码问题（参考：<a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386819196283586a37629844456ca7e5a7faa9b94ee8000" target="_blank" rel="external">字符串和编码 - 廖雪峰</a>），默认unicode编码，所以如果不进行处理，通常会有中文乱码产生，以下为处理方式，经测试ok</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="title">try</span>:</div><div class="line">	<span class="class"><span class="keyword">data</span> += symbol.<span class="keyword">data</span>.decode('<span class="title">utf</span>-8').encode('<span class="title">sjis'</span>).decode('<span class="title">utf</span>-8')</span></div><div class="line"><span class="title">except</span>:</div><div class="line">	<span class="class"><span class="keyword">data</span> += symbol.<span class="keyword">data</span></span></div></pre></td></tr></table></figure>
-<p>以上简单操作即完成QR-Code的生成和解析工作，不过解析的正确率有待验证，特别是扭曲变形或者背景稍混乱的图片，有可能部分识别错误或者无法识别。</p>
-<h2 id="Zxing-Zbar"><a href="#Zxing-Zbar" class="headerlink" title="Zxing+Zbar"></a><strong>Zxing+Zbar</strong></h2><p>另外几篇关于Zxing源码的分析，以及Android下整合Zxing和zbar的文章</p>
+<h2 id="Hexo环境搭建"><a href="#Hexo环境搭建" class="headerlink" title="Hexo环境搭建"></a>Hexo环境搭建</h2><h3 id="node-js-git-hexo"><a href="#node-js-git-hexo" class="headerlink" title="node.js, git, hexo"></a>node.js, git, hexo</h3><p>node.js, git, hexo的傻瓜式安装，参考hexo官方文档即可<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
+<h3 id="public-key"><a href="#public-key" class="headerlink" title="public-key"></a>public-key</h3><p>git的public-key的配置，参考常见问题，具体步骤为<code>查看本地是否存在public-key</code>-&gt;<code>如果没有则生成pub</code>-&gt;<code>将已有或者生成的pub添加至git的.ssh文件夹下</code>-&gt;<code>添加至github并连接</code></p>
 <blockquote>
-<ol>
-<li><a href="http://www.lai18.com/content/1012109.html" target="_blank" rel="external">秒杀主流应用的二维码扫描</a></li>
-<li><a href="http://kuangjianwei.blog.163.com/blog/static/190088953201361015055110/" target="_blank" rel="external">zxing源码分析——QR码部分</a></li>
-<li><a href="http://kuangjianwei.blog.163.com/blog/static/1900889532013612103136888/" target="_blank" rel="external">zxing源码分析——DataMatrix码部分</a></li>
-</ol>
+<p><a href="https://help.github.com/articles/checking-for-existing-ssh-keys" target="_blank" rel="external"><code>**查看本地已有的SSH keys**</code></a></p>
 </blockquote>
-<hr>
+<p>Before you generate an SSH key, you can check to see if you have any existing SSH keys. Enter <code>ls -al ~/.ssh</code> to see if existing SSH keys are present:<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ls</span> -al ~/.ssh</div><div class="line"><span class="comment"># Lists the files in your .ssh directory, if they exist</span></div></pre></td></tr></table></figure></p>
+<p>Check the directory listing to see if you already have a public SSH key.</p>
+<ul>
+<li><p>If you don’t have an existing public and private key pair, or don’t wish to use any that are available to connect to GitHub, then generate a new SSH key.</p>
+</li>
+<li><p>If you see an existing public and private key pair listed (for example id_rsa.pub and id_rsa) that you would like to use to connect to GitHub, you can add your SSH key to the ssh-agent.</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="external"><code>**生成SSH key**</code></a></p>
+</blockquote>
+<p>After you’ve checked for existing SSH keys, you can generate a new SSH key to use for authentication, then add it to the ssh-agent.</p>
+<blockquote>
+<p><code>**添加SSH key到ssh-agent**</code>, If you have GitHub for Windows installed, you can use it to clone repositories and not deal with SSH keys. It also comes with the Git Bash tool, which is the preferred way of running git commands on Windows.</p>
+</blockquote>
+<ol>
+<li><p>Ensure ssh-agent is enabled: <strong>If you are using Git Bash</strong>, turn on ssh-agent:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># start the ssh-agent in the background</span></div><div class="line"><span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></div><div class="line">Agent pid 59566</div></pre></td></tr></table></figure>
+</li>
+<li><p>Add your SSH key to the ssh-agent. If you used an existing SSH key rather than generating a new SSH key, you’ll need to replace id_rsa in the command with the name of your existing private key file.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-<span class="keyword">add</span><span class="bash"> ~/.ssh/id_rsa	<span class="comment"># id_rsa为对应.pub的本地key</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Add the SSH key to your GitHub account.(next)</p>
+</li>
+</ol>
+<blockquote>
+<p><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account" target="_blank" rel="external"><code>**添加SSH key至GitHub账户**</code></a></p>
+</blockquote>
+<p>To configure your GitHub account to use your new (or existing) SSH key, you’ll also need to add it to your GitHub account.</p>
+<blockquote>
+<p><a href="https://help.github.com/articles/testing-your-ssh-connection" target="_blank" rel="external"><code>**测试SSH连接**</code></a></p>
+</blockquote>
+<p>After you’ve set up your SSH key and added it to your GitHub account, you can test your connection.<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ssh</span> -T git<span class="variable">@github</span>.com</div><div class="line"><span class="comment"># Attempts to ssh to GitHub</span></div></pre></td></tr></table></figure></p>
+<h3 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h3><p>Hexo 提供了快速方便的一键部署功能，<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo</span> d	<span class="comment"># hexo deploy</span></div></pre></td></tr></table></figure></p>
+<p>不过需要首先安装 <code>hexo-deployer-git</code>，<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></div></pre></td></tr></table></figure></p>
+<p>然后修改配置。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">deploy</span>:</div><div class="line">  <span class="attribute">type</span>: git</div><div class="line">  <span class="attribute">message</span>: notes-to-commit</div><div class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:username/username.github.io.git</div><div class="line">  <span class="attribute">branch</span>: master</div></pre></td></tr></table></figure></p>
+<h3 id="hexo设置"><a href="#hexo设置" class="headerlink" title="hexo设置"></a>hexo设置</h3><p><code>主目录</code>下的_config.yml文件操作，参考hexo官方配置教程</p>
+<h2 id="hexo主题配置"><a href="#hexo主题配置" class="headerlink" title="hexo主题配置"></a>hexo主题配置</h2><p>主题的安装，比较推荐的有jacman、next, 到hexo官方主题区或者github搜索即可，相应安装只需git clone到博客目录下themes文件夹下</p>
+<p>hexo主题配置，同样的_config.yml文件操作，只不过位于<code>主题文件夹</code>下，具体参考相应主题文档</p>
+<h2 id="hexo挂件及优化"><a href="#hexo挂件及优化" class="headerlink" title="hexo挂件及优化"></a>hexo挂件及优化</h2><h2 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h2><p>OK, here, I collect some useful hyperlinks for your building up a new static blog. Here we go: </p>
+<ol>
+<li><p><a href="https://jekyllrb.com/" target="_blank" rel="external">Jekyll</a>, the core engine to translate a .md file to static webPage.</p>
+</li>
+<li><p><a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="external">MarkDown</a>, a <code>text-to-HTML</code> conversion tool for web writers. </p>
+</li>
+<li><p><a href="https://github.com" target="_blank" rel="external">GitHUb</a>, a web server to locate the blog source files, so that you can easily get a self-website without purchase for anything, just directly go to <code>username.github.io</code>. </p>
+</li>
+</ol>
 
       
     </div>
@@ -374,22 +418,6 @@
     <div>
       
         
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>打赏不如交个朋友</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechat.jpg" alt="Freddy WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-    </div>
-  </div>
-
 
       
     </div>
@@ -400,7 +428,13 @@
           
             <a href="/tags/app/" rel="tag">#app</a>
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/dev/" rel="tag">#dev</a>
+          
+            <a href="/tags/blog/" rel="tag">#blog</a>
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/next/" rel="tag">#next</a>
           
         </div>
       
@@ -409,16 +443,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/art/2016-06/MLND_P0_Titanic_Survival_Exploration.html" rel="next" title="MLND_P0 Titanic Survival Exploration">
-                <i class="fa fa-chevron-left"></i> MLND_P0 Titanic Survival Exploration
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/art/2016-07/learning data science within 10 days.html" rel="prev" title="10天100小时学数据科学 [转]">
-                10天100小时学数据科学 [转] <i class="fa fa-chevron-right"></i>
+              <a href="/art/2016-01/little-beard-01.html" rel="prev" title="小胡子(一)">
+                小胡子(一) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -434,10 +464,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="art/2016-06/QrCode process with python.html"
-     data-title="二维码生成和解析工具"
+        <div class="ds-share flat" data-thread-key="art/2015-12/blog-setup.html"
+     data-title="用Hexo搭建个人博客"
      data-content=""
-     data-url="http://ziqianxy.github.io/art/2016-06/QrCode process with python.html">
+     data-url="http://ziqianxy.github.io/art/2015-12/blog-setup.html">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -464,8 +494,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="art/2016-06/QrCode process with python.html"
-           data-title="二维码生成和解析工具" data-url="http://ziqianxy.github.io/art/2016-06/QrCode process with python.html">
+      <div class="ds-thread" data-thread-key="art/2015-12/blog-setup.html"
+           data-title="用Hexo搭建个人博客" data-url="http://ziqianxy.github.io/art/2015-12/blog-setup.html">
       </div>
     
   </div>
@@ -510,17 +540,24 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -528,6 +565,13 @@
 
         </nav>
 
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
         
 
         <div class="links-of-author motion-element">
@@ -569,7 +613,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#qrcode"><span class="nav-text">qrcode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码"><span class="nav-text">示例代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#zbar"><span class="nav-text">zbar </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例代码-1"><span class="nav-text">示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文乱码解决"><span class="nav-text">中文乱码解决</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Zxing-Zbar"><span class="nav-text">Zxing+Zbar</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo环境搭建"><span class="nav-number">1.</span> <span class="nav-text">Hexo环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#node-js-git-hexo"><span class="nav-number">1.1.</span> <span class="nav-text">node.js, git, hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#public-key"><span class="nav-number">1.2.</span> <span class="nav-text">public-key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署至github"><span class="nav-number">1.3.</span> <span class="nav-text">部署至github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo设置"><span class="nav-number">1.4.</span> <span class="nav-text">hexo设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo主题配置"><span class="nav-number">2.</span> <span class="nav-text">hexo主题配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo挂件及优化"><span class="nav-number">3.</span> <span class="nav-text">hexo挂件及优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他资源"><span class="nav-number">4.</span> <span class="nav-text">其他资源</span></a></li></ol></div>
             
           </div>
         </section>
