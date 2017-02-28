@@ -16,8 +16,8 @@ menu:
 
 
 sidebar:
-  overview: 站点概览
-  toc: 文章目录
+  overview: 概览
+  toc: 目录
 
 post:
   sticky: 置顶
@@ -25,8 +25,8 @@ post:
   in: 分类于
   visitors: 阅读次数
   read_more: 阅读全文
-  untitled: No-One
-  toc_empty: 此文章未包含目录
+  untitled: 无题
+  toc_empty: 此文未划分目录
 
 page:
   totally: 共有
@@ -67,7 +67,7 @@ cheers:
   great: 非常好
   excellent: 太棒了
 
-keep_on: 继续努力。
+keep_on: 继续努力
 
 symbol:
   comma: '， '

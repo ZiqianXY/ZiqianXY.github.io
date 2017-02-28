@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Ziqiany
+title: 八田贝
 subtitle: 星辰大海 如约而至
 description: My conquest is the sea of stars.
 author: Freddy
 email: ziqiany@163.com
-language: default
-timezone: UTC
+language: zh-Hans
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ziqianxy.github.io/
+url: http://ziqianxy.github.io
 root: /
-permalink: art/:year/:title.html
+permalink: art/:year-:month/:title.html
 permalink_defaults:
 
 # Directory
@@ -58,18 +58,19 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 5
+per_page: 7
 pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+#theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  message: update blog structure with freddyPC.
+  message: fix config problem from deepin@PC.
   repo: git@github.com:ziqianxy/ziqianxy.github.io.git
   branch: master
