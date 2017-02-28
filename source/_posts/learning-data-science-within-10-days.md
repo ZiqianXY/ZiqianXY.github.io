@@ -2,9 +2,8 @@
 title: 10天100小时学数据科学 [转]
 date: 2016-07-16
 type: "tags"
-tags:
-- data
-- learning
+tags: [data, learning]
+categories: ML
 ---
 
 

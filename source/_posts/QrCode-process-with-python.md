@@ -2,9 +2,8 @@
 title: 二维码生成和解析工具
 date: 2016-06-18
 type: "tags"
-tags: 
-- app
-- python
+tags: [app, dev, qrcode, python]
+categories: dev
 ---
 
 QR-Code是用的最多的一种二维码，python环境下生成和解析分别有相应工具包。最近对二维码的生成和解析进行了一些学习，此处仅对qrcode和zbar两个工具包的使用进行介绍。

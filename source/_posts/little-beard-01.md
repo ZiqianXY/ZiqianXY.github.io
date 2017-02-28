@@ -2,8 +2,8 @@
 title: 小胡子(一)
 date: 2016-01-20
 type: "tags"
-tags:
-- beard
+tags: [beard, fred]
+categories: fred
 ---
 
 
@@ -36,4 +36,3 @@ tags:
 可是，我就是要弄清楚这一切！我盼着生长的更快，更高，可是我却不知道如何才能做到。我只能静静地等待，等待着下一个破板之日。我静静地等，静静地等 ... ...
 
 
-@ [Ziqian](http://www.jianshu.com/users/b08df9e2410f/latest_articles)

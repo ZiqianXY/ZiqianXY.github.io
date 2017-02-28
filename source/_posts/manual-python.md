@@ -2,8 +2,8 @@
 title: python resources collection
 date: 2016-04-10
 type: "tags"
-tags:
-- python
+tags: [python, manual]
+categories: manual
 ---
 
 here is some python resources collection

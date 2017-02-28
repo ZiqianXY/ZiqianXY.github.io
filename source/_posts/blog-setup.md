@@ -2,9 +2,8 @@
 title: 用Hexo搭建个人博客
 date: 2015-12-15
 type: "tags"
-tags: 
-- app
-- dailylife
+tags: [app, blog, dev, hexo, next]
+categories: dev
 ---
   
 本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。

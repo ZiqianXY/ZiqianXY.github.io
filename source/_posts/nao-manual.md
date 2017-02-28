@@ -2,9 +2,8 @@
 title: Nao网络控制台使用指南
 date: 2016-05-23
 type: "tags"
-tags:
-- nao
-- app
+tags: [nao, app, dev, python]
+categories: dev
 ---
 
 NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。

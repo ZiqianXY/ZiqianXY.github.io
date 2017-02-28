@@ -3,9 +3,8 @@ title: NaoController deployment with webpy
 date: 2016-05-25
 updated: 2016-05-26
 type: "tags"
-tags:
-- nao
-- app
+tags: [nao, app, dev, python]
+categories: dev
 ---
 
 
