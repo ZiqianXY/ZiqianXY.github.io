@@ -80,6 +80,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  message: add baidu verify file to root from deepin@PC.
+  message: updata articles from deepin@PC.
   repo: git@github.com:ziqianxy/ziqianxy.github.io.git
   branch: master

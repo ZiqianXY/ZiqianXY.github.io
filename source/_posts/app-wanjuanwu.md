@@ -1,9 +1,8 @@
 ---
 title: 开发APP的始末
 date: 2016-02-15
-type: "tags"
 tags: [nao, app, dev, python]
-categories: dev
+categories: [dev, android]
 ---
 
 很多时候，总是因为习惯了周遭的一切，而不敢做出新的尝试，接触新的人群，给自己提出新的改变。习惯了我所习惯的一切，我甚至遗忘了自己的兴趣！

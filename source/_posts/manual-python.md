@@ -1,20 +1,28 @@
 ---
-title: python resources collection
+title: Python Manual
 date: 2016-04-10
-type: "tags"
 tags: [python, manual]
-categories: manual
+categories: [manual, python]
 ---
 
-here is some python resources collection
+整理了python的入门资源，以供参考。
 
 <!--more-->
 
->1. [Introduction · A Byte of Python](http://python.swaroopch.com/)
+## 入门介绍
+- [Introduction · A Byte of Python](http://python.swaroopch.com/)
 
->2. [Python风格规范 — Google 开源项目风格指南](http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/)
+## 编码规范
+- [Python风格规范 — Google 开源项目风格指南](http://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/python_style_rules/)
 
->3. [Full Stack Python](http://www.fullstackpython.com/)
+## 问答社区
+- [Full Stack Python](http://www.fullstackpython.com/)
 
->4. [老齐Py-python - 问题 - SegmentFault](https://segmentfault.com/t/python)
+
+---
+
+持续更新记录：
+- 2016-06-15， 添加google编码风格指南
+
+- 2016-04-10， 开始整理，添加入门介绍，问答社区
 

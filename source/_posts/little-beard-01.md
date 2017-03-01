@@ -1,9 +1,8 @@
 ---
 title: 小胡子(一)
 date: 2016-01-20
-type: "tags"
 tags: [beard, fred]
-categories: fred
+categories: [fred, beard]
 ---
 
 
