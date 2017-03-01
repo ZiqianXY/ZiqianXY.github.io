@@ -271,6 +271,9 @@ mathjax:
 # Duoshuo ShortName
 duoshuo_shortname: ziqiany
 
+# 多说热评文章 true 或者 false
+duoshuo_hotartical: false
+
 # Disqus
 #disqus_shortname:
 
@@ -355,8 +358,8 @@ busuanzi_count:
 tencent_analytics: 60913464
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
-
+baidu_push: true
+baidu_site_verification: junCw6PBh5
 
 
 #! ---------------------------------------------------------------

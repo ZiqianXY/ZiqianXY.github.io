@@ -5,7 +5,7 @@
 # Site
 title: 八田贝
 subtitle: 星辰大海 如约而至
-description: My conquest is the sea of stars.
+description: 星辰大海 如约而至
 author: Freddy
 email: ziqiany@163.com
 language: zh-Hans
@@ -15,8 +15,16 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://ziqianxy.github.io
 root: /
-permalink: art/:year-:month/:title.html
+permalink: art/:year-:month/:title/
 permalink_defaults:
+
+# search
+search:
+ path: search.xml
+ field: post
+ format: html
+ limit: 10000
+ 
 
 # Directory
 source_dir: source
@@ -31,13 +39,14 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
+auto_spacing: true
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
-filename_case: 0
+filename_case: 1
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
-future: true
+future: false
 highlight:
   enable: true
   line_number: true
@@ -71,6 +80,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  message: fix config problem from deepin@PC.
+  message: add baidu verify file to root from deepin@PC.
   repo: git@github.com:ziqianxy/ziqianxy.github.io.git
   branch: master
