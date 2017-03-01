@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ziqianxy.github.io/"/>
-  <updated>2017-02-28T06:26:46.021Z</updated>
+  <updated>2017-03-01T05:25:11.772Z</updated>
   <id>http://ziqianxy.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>10天100小时学数据科学 [转]</title>
-    <link href="http://ziqianxy.github.io/art/2016-07/learning-data-science-within-10-days.html"/>
-    <id>http://ziqianxy.github.io/art/2016-07/learning-data-science-within-10-days.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-07/learning-data-science-within-10-days/"/>
+    <id>http://ziqianxy.github.io/art/2016-07/learning-data-science-within-10-days/</id>
     <published>2016-07-15T16:00:00.000Z</published>
-    <updated>2017-02-28T06:26:46.021Z</updated>
+    <updated>2017-03-01T05:25:11.772Z</updated>
     
     <content type="html"><![CDATA[<p>有位网友在 Quora 提问，并补充说「我有10天空闲时间，每天想花十个小时学习数据科学入门知识，应该学点什么呢？」</p>
 <p>以下内容摘编了 <code>Roman Trusov</code> 的回复，并由 <code>XiaoxiaoLi</code> 翻译，非常值得新手参考。</p>
@@ -87,8 +87,8 @@
   
   <entry>
     <title>二维码生成和解析工具</title>
-    <link href="http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python.html"/>
-    <id>http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python/"/>
+    <id>http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python/</id>
     <published>2016-06-17T16:00:00.000Z</published>
     <updated>2017-02-28T06:26:34.424Z</updated>
     
@@ -137,13 +137,13 @@
   
   <entry>
     <title>NaoController deployment with webpy</title>
-    <link href="http://ziqianxy.github.io/art/2016-05/nao-deploy.html"/>
-    <id>http://ziqianxy.github.io/art/2016-05/nao-deploy.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-05/nao-deploy/"/>
+    <id>http://ziqianxy.github.io/art/2016-05/nao-deploy/</id>
     <published>2016-05-24T16:00:00.000Z</published>
     <updated>2016-05-25T16:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>Nao robot</strong> , is deployed on a Centoo-based operation system “<strong><em>Naoqi</em></strong>“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now, let us see how to do that with <strong><em>python</em></strong> and <strong><em>webpy</em></strong>. </p>
-<p><img src="/images/nao.jpg" alt="Nao"></p>
+<img src="/art/2016-05/nao-deploy/nao.jpg" alt="Nao" title="Nao">
 <a id="more"></a>
 <p>To get it convenient to make Nao move and interact with other people, we need to crate a easy-use application, where we can access from many other device. So I chose to make it a web server deployed on Nao’s Head, so that I can access it once the robot operation is running.</p>
 <p>First, I need a web struct. After comparing some most-used web server structure, I chose <strong>webpy</strong>, cause its simply development. </p>
@@ -153,7 +153,7 @@
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;Nao robot&lt;/strong&gt; , is deployed on a Centoo-based operation system “&lt;strong&gt;&lt;em&gt;Naoqi&lt;/em&gt;&lt;/strong&gt;“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now, let us see how to do that with &lt;strong&gt;&lt;em&gt;python&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;webpy&lt;/em&gt;&lt;/strong&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/nao.jpg&quot; alt=&quot;Nao&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;/art/2016-05/nao-deploy/nao.jpg&quot; alt=&quot;Nao&quot; title=&quot;Nao&quot;&gt;
     
     </summary>
     
@@ -172,19 +172,18 @@
   
   <entry>
     <title>Nao网络控制台使用指南</title>
-    <link href="http://ziqianxy.github.io/art/2016-05/nao-manual.html"/>
-    <id>http://ziqianxy.github.io/art/2016-05/nao-manual.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-05/nao-manual/"/>
+    <id>http://ziqianxy.github.io/art/2016-05/nao-manual/</id>
     <published>2016-05-22T16:00:00.000Z</published>
-    <updated>2017-03-01T02:41:59.030Z</updated>
+    <updated>2017-03-01T03:33:01.950Z</updated>
     
     <content type="html"><![CDATA[<p>NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。</p>
+<img src="/art/2016-05/nao-manual/NaoControlUI.PNG" alt="UI of Nao Control Center" title="UI of Nao Control Center">
 <a id="more"></a>
 <h2 id="一、-连接步骤"><a href="#一、-连接步骤" class="headerlink" title="一、 连接步骤"></a><strong>一、 连接步骤</strong></h2><p>浏览器客户端只需在使用时访问对应局域网链接即可，具体步骤如下详述：</p>
 <h3 id="1-建立热点"><a href="#1-建立热点" class="headerlink" title="1.    建立热点"></a>1.    <strong>建立热点</strong></h3><p>打开Nao机器人之前，请使用手机或其他设备开启一个热点，并修改热点名称和密码分别为Nao已经连接过的网络即可，以便机器人开机能够自动连接到此局域网络，否则后续连接操作将无法进行。 </p>
 <h3 id="2-启动Nao机器人"><a href="#2-启动Nao机器人" class="headerlink" title="2.    启动Nao机器人"></a>2.    <strong>启动Nao机器人</strong></h3><p>短暂按下Nao胸部按钮，指示灯将亮起，启动Nao机器人，等待3-5分钟不等，待机器人发出“looking for connected … ”的声音后，即表示完成启动。正常启动后，一般机器人会自动站立。</p>
 <h3 id="3-获取ip，访问控制台"><a href="#3-获取ip，访问控制台" class="headerlink" title="3.    获取ip，访问控制台"></a>3.    <strong>获取ip，访问控制台</strong></h3><p>再次短暂按下Nao胸部按钮，Nao将会告知服务器地址，记下这个ip (例如，192.168.1.107)，然后用任意连接至此热点的设备访问1111端口，具体操作为：打开浏览器，访问链接[ ip:1111 ] (注意，冒号必须是英文符号，例如，192.168.1.107:1111)，以上操作无误即可进入上述控制台界面。</p>
-
-<p><img src="/images/NaoControlUI.PNG" alt="Nao Control Center UI"></p>
 <h2 id="二、-控制台使用说明"><a href="#二、-控制台使用说明" class="headerlink" title="二、 控制台使用说明"></a><strong>二、 控制台使用说明</strong></h2><p>控制台主要提供了基本的运动和简易交互控制功能，主要包括：移动（前后左右）、舞蹈、模仿、对话、休息、电源等功能。</p>
 <h3 id="1-移动"><a href="#1-移动" class="headerlink" title="1. 移动"></a>1. 移动</h3><p><strong>[^] [v] [&lt;] [&gt;]</strong><br>分别对应前进、后退、左转90度、右转90度。方向为机器人参考方向。前进和后退会同时 [加/减10%音量]，可根据需要执行相应操作。<br><strong>[StandUp] [SitDown]  </strong><br>站立/坐下。如果机器人当前不在该状态，将执行对应动作，否则无响应。</p>
 <h3 id="2-舞蹈"><a href="#2-舞蹈" class="headerlink" title="2. 舞蹈"></a>2. 舞蹈</h3><p><strong>[GangnamStyle] [JazzDance] [TaiChi]  </strong><br>分别对应 “江南style”“爵士舞”“太极”。舞蹈时间较长，期间建议不要点击 [Stop] 终止操作，有可能造成机器人摔倒。</p>
@@ -201,6 +200,7 @@
     <summary type="html">
     
       &lt;p&gt;NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。&lt;/p&gt;
+&lt;img src=&quot;/art/2016-05/nao-manual/NaoControlUI.PNG&quot; alt=&quot;UI of Nao Control Center&quot; title=&quot;UI of Nao Control Center&quot;&gt;
     
     </summary>
     
@@ -219,8 +219,8 @@
   
   <entry>
     <title>python resources collection</title>
-    <link href="http://ziqianxy.github.io/art/2016-04/manual-python.html"/>
-    <id>http://ziqianxy.github.io/art/2016-04/manual-python.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-04/manual-python/"/>
+    <id>http://ziqianxy.github.io/art/2016-04/manual-python/</id>
     <published>2016-04-09T16:00:00.000Z</published>
     <updated>2017-02-28T06:26:43.525Z</updated>
     
@@ -257,8 +257,8 @@
   
   <entry>
     <title>开发APP的始末</title>
-    <link href="http://ziqianxy.github.io/art/2016-02/app-wanjuanwu.html"/>
-    <id>http://ziqianxy.github.io/art/2016-02/app-wanjuanwu.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-02/app-wanjuanwu/"/>
+    <id>http://ziqianxy.github.io/art/2016-02/app-wanjuanwu/</id>
     <published>2016-02-14T16:00:00.000Z</published>
     <updated>2017-03-01T01:39:04.849Z</updated>
     
@@ -300,8 +300,8 @@
   
   <entry>
     <title>小胡子(一)</title>
-    <link href="http://ziqianxy.github.io/art/2016-01/little-beard-01.html"/>
-    <id>http://ziqianxy.github.io/art/2016-01/little-beard-01.html</id>
+    <link href="http://ziqianxy.github.io/art/2016-01/little-beard-01/"/>
+    <id>http://ziqianxy.github.io/art/2016-01/little-beard-01/</id>
     <published>2016-01-19T16:00:00.000Z</published>
     <updated>2017-02-28T06:26:37.697Z</updated>
     
@@ -340,13 +340,15 @@
   
   <entry>
     <title>用Hexo搭建个人博客</title>
-    <link href="http://ziqianxy.github.io/art/2015-12/blog-setup.html"/>
-    <id>http://ziqianxy.github.io/art/2015-12/blog-setup.html</id>
+    <link href="http://ziqianxy.github.io/art/2015-12/blog-setup/"/>
+    <id>http://ziqianxy.github.io/art/2015-12/blog-setup/</id>
     <published>2015-12-14T16:00:00.000Z</published>
-    <updated>2017-02-28T06:25:45.679Z</updated>
+    <updated>2017-03-01T05:17:24.162Z</updated>
     
     <content type="html"><![CDATA[<p>本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是以后总快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。</p>
 <a id="more"></a>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="0" height="0" src="//music.163.com/outchain/player?type=2&id=459148032&auto=1&height=32"></iframe>
+
 <h2 id="Hexo环境搭建"><a href="#Hexo环境搭建" class="headerlink" title="Hexo环境搭建"></a>Hexo环境搭建</h2><h3 id="node-js-git-hexo"><a href="#node-js-git-hexo" class="headerlink" title="node.js, git, hexo"></a>node.js, git, hexo</h3><p>node.js, git, hexo的傻瓜式安装，参考hexo官方文档即可<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure></p>
 <h3 id="public-key"><a href="#public-key" class="headerlink" title="public-key"></a>public-key</h3><p>git的public-key的配置，参考常见问题，具体步骤为<code>查看本地是否存在public-key</code>-&gt;<code>如果没有则生成pub</code>-&gt;<code>将已有或者生成的pub添加至git的.ssh文件夹下</code>-&gt;<code>添加至github并连接</code></p>
 <blockquote>

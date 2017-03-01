@@ -21,6 +21,8 @@
 
 
 
+  <meta name="baidu-site-verification" content="junCw6PBh5" />
+
 
 
 
@@ -104,18 +106,18 @@
 
 
 
-<meta name="description" content="NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。">
+<meta name="description" content="Nao robot , is deployed on a Centoo-based operation system “Naoqi“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nao网络控制台使用指南">
-<meta property="og:url" content="http://ziqianxy.github.io/art/2016-05/nao-manual.html">
+<meta property="og:title" content="NaoController deployment with webpy">
+<meta property="og:url" content="http://ziqianxy.github.io/art/2016-05/nao-deploy/index.html">
 <meta property="og:site_name" content="八田贝">
-<meta property="og:description" content="NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。">
-<meta property="og:image" content="http://ziqianxy.github.io/images/NaoControlUI.PNG">
-<meta property="og:updated_time" content="2017-03-01T02:41:59.030Z">
+<meta property="og:description" content="Nao robot , is deployed on a Centoo-based operation system “Naoqi“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now,">
+<meta property="og:image" content="http://ziqianxy.github.io/art/2016-05/nao-deploy/nao.jpg">
+<meta property="og:updated_time" content="2016-05-25T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nao网络控制台使用指南">
-<meta name="twitter:description" content="NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。">
-<meta name="twitter:image" content="http://ziqianxy.github.io/images/NaoControlUI.PNG">
+<meta name="twitter:title" content="NaoController deployment with webpy">
+<meta name="twitter:description" content="Nao robot , is deployed on a Centoo-based operation system “Naoqi“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now,">
+<meta name="twitter:image" content="http://ziqianxy.github.io/art/2016-05/nao-deploy/nao.jpg">
 
 
 
@@ -136,9 +138,9 @@
 
 
 
-  <link rel="canonical" href="http://ziqianxy.github.io/art/2016-05/nao-manual.html"/>
+  <link rel="canonical" href="http://ziqianxy.github.io/art/2016-05/nao-deploy/"/>
 
-  <title> Nao网络控制台使用指南 | 八田贝 </title>
+  <title> NaoController deployment with webpy | 八田贝 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,9 +243,32 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
   
 </nav>
 
@@ -277,7 +302,7 @@
             
             
               
-                Nao网络控制台使用指南
+                NaoController deployment with webpy
               
             
           </h1>
@@ -289,8 +314,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-23T00:00:00+08:00" content="2016-05-23">
-              2016-05-23
+            <time itemprop="dateCreated" datetime="2016-05-25T00:00:00+08:00" content="2016-05-25">
+              2016-05-25
             </time>
           </span>
 
@@ -319,8 +344,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/art/2016-05/nao-manual.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="art/2016-05/nao-manual.html" itemprop="commentsCount"></span>
+                <a href="/art/2016-05/nao-deploy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="art/2016-05/nao-deploy/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -330,7 +355,7 @@
 
           
           
-             <span id="/art/2016-05/nao-manual.html" class="leancloud_visitors" data-flag-title="Nao网络控制台使用指南">
+             <span id="/art/2016-05/nao-deploy/" class="leancloud_visitors" data-flag-title="NaoController deployment with webpy">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -352,25 +377,12 @@
       
 
       
-        <p>NaoControlCenter为简易版Nao机器人控制台，主要包括服务器端和浏览器客户端两部分。其中，服务器部署在Nao机器人上，Nao开机后服务程序自动启动。</p>
+        <p><strong>Nao robot</strong> , is deployed on a Centoo-based operation system “<strong><em>Naoqi</em></strong>“, with a dozen of softwares giving him human-like emotion. To get a convenient way to control nao, we write a Controller for him. Now, let us see how to do that with <strong><em>python</em></strong> and <strong><em>webpy</em></strong>. </p>
+<img src="/art/2016-05/nao-deploy/nao.jpg" alt="Nao" title="Nao">
 <a id="more"></a>
-<h2 id="一、-连接步骤"><a href="#一、-连接步骤" class="headerlink" title="一、 连接步骤"></a><strong>一、 连接步骤</strong></h2><p>浏览器客户端只需在使用时访问对应局域网链接即可，具体步骤如下详述：</p>
-<h3 id="1-建立热点"><a href="#1-建立热点" class="headerlink" title="1.    建立热点"></a>1.    <strong>建立热点</strong></h3><p>打开Nao机器人之前，请使用手机或其他设备开启一个热点，并修改热点名称和密码分别为Nao已经连接过的网络即可，以便机器人开机能够自动连接到此局域网络，否则后续连接操作将无法进行。 </p>
-<h3 id="2-启动Nao机器人"><a href="#2-启动Nao机器人" class="headerlink" title="2.    启动Nao机器人"></a>2.    <strong>启动Nao机器人</strong></h3><p>短暂按下Nao胸部按钮，指示灯将亮起，启动Nao机器人，等待3-5分钟不等，待机器人发出“looking for connected … ”的声音后，即表示完成启动。正常启动后，一般机器人会自动站立。</p>
-<h3 id="3-获取ip，访问控制台"><a href="#3-获取ip，访问控制台" class="headerlink" title="3.    获取ip，访问控制台"></a>3.    <strong>获取ip，访问控制台</strong></h3><p>再次短暂按下Nao胸部按钮，Nao将会告知服务器地址，记下这个ip (例如，192.168.1.107)，然后用任意连接至此热点的设备访问1111端口，具体操作为：打开浏览器，访问链接[ ip:1111 ] (注意，冒号必须是英文符号，例如，192.168.1.107:1111)，以上操作无误即可进入上述控制台界面。</p>
-
-<p><img src="/images/NaoControlUI.PNG" alt="Nao Control Center UI"></p>
-<h2 id="二、-控制台使用说明"><a href="#二、-控制台使用说明" class="headerlink" title="二、 控制台使用说明"></a><strong>二、 控制台使用说明</strong></h2><p>控制台主要提供了基本的运动和简易交互控制功能，主要包括：移动（前后左右）、舞蹈、模仿、对话、休息、电源等功能。</p>
-<h3 id="1-移动"><a href="#1-移动" class="headerlink" title="1. 移动"></a>1. 移动</h3><p><strong>[^] [v] [&lt;] [&gt;]</strong><br>分别对应前进、后退、左转90度、右转90度。方向为机器人参考方向。前进和后退会同时 [加/减10%音量]，可根据需要执行相应操作。<br><strong>[StandUp] [SitDown]  </strong><br>站立/坐下。如果机器人当前不在该状态，将执行对应动作，否则无响应。</p>
-<h3 id="2-舞蹈"><a href="#2-舞蹈" class="headerlink" title="2. 舞蹈"></a>2. 舞蹈</h3><p><strong>[GangnamStyle] [JazzDance] [TaiChi]  </strong><br>分别对应 “江南style”“爵士舞”“太极”。舞蹈时间较长，期间建议不要点击 [Stop] 终止操作，有可能造成机器人摔倒。</p>
-<h3 id="3-模仿"><a href="#3-模仿" class="headerlink" title="3. 模仿"></a>3. 模仿</h3><p><strong>[Drive] [TakePhoto]</strong><br>分别对应“开车”和“拍照”模仿动作。同上，不要在运动中终止操作。</p>
-<h3 id="4-对话"><a href="#4-对话" class="headerlink" title="4. 对话"></a>4. 对话</h3><p><strong>[Chat]</strong><br>启动对话模式，可与机器人进行对话，并可根据机器人提示说明，通过对话控制相关动作。目前版本的中文识别效果不佳，不推荐使用。</p>
-<h3 id="5-休息"><a href="#5-休息" class="headerlink" title="5.    休息"></a>5.    休息</h3><p><strong>[Sleep]</strong><br>当长时间开启时，机器人关节和CPU会发热，如果散热条件不好会造成局部过热，此时可通过此操作将各关节电机卸载，缓解过热问题。</p>
-<h3 id="6-电源"><a href="#6-电源" class="headerlink" title="6.    电源"></a>6.    电源</h3><p><strong>[PowerOff]</strong><br>执行关机操作，机器人将复位关机。</p>
-<h2 id="三、-特别说明："><a href="#三、-特别说明：" class="headerlink" title="三、 特别说明："></a><strong>三、 特别说明：</strong></h2><ol>
-<li>由于采用远程控制方式，实际操作会有一定延时，一个动作未结束时，建议不要多次点击其他动作，有可能造成后续动作紊乱。</li>
-<li>机器人自平衡能力有限，仅限在平面硬地板上完成动作，以免造成意外跌落损坏。</li>
-</ol>
+<p>To get it convenient to make Nao move and interact with other people, we need to crate a easy-use application, where we can access from many other device. So I chose to make it a web server deployed on Nao’s Head, so that I can access it once the robot operation is running.</p>
+<p>First, I need a web struct. After comparing some most-used web server structure, I chose <strong>webpy</strong>, cause its simply development. </p>
+<p>Then, I deployed the server on Nao’s operation device. And add the service to auto startup list, so that it can auto run once the robot start its service.</p>
 
       
     </div>
@@ -407,16 +419,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/art/2016-04/manual-python.html" rel="next" title="python resources collection">
-                <i class="fa fa-chevron-left"></i> python resources collection
+              <a href="/art/2016-05/nao-manual/" rel="next" title="Nao网络控制台使用指南">
+                <i class="fa fa-chevron-left"></i> Nao网络控制台使用指南
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/art/2016-05/nao-deploy.html" rel="prev" title="NaoController deployment with webpy">
-                NaoController deployment with webpy <i class="fa fa-chevron-right"></i>
+              <a href="/art/2016-06/QrCode-process-with-python/" rel="prev" title="二维码生成和解析工具">
+                二维码生成和解析工具 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -432,10 +444,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="art/2016-05/nao-manual.html"
-     data-title="Nao网络控制台使用指南"
+        <div class="ds-share flat" data-thread-key="art/2016-05/nao-deploy/"
+     data-title="NaoController deployment with webpy"
      data-content=""
-     data-url="http://ziqianxy.github.io/art/2016-05/nao-manual.html">
+     data-url="http://ziqianxy.github.io/art/2016-05/nao-deploy/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -462,8 +474,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="art/2016-05/nao-manual.html"
-           data-title="Nao网络控制台使用指南" data-url="http://ziqianxy.github.io/art/2016-05/nao-manual.html">
+      <div class="ds-thread" data-thread-key="art/2016-05/nao-deploy/"
+           data-title="NaoController deployment with webpy" data-url="http://ziqianxy.github.io/art/2016-05/nao-deploy/">
       </div>
     
   </div>
@@ -581,7 +593,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、-连接步骤"><span class="nav-number">1.</span> <span class="nav-text">一、 连接步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-建立热点"><span class="nav-number">1.1.</span> <span class="nav-text">1.    建立热点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-启动Nao机器人"><span class="nav-number">1.2.</span> <span class="nav-text">2.    启动Nao机器人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-获取ip，访问控制台"><span class="nav-number">1.3.</span> <span class="nav-text">3.    获取ip，访问控制台</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、-控制台使用说明"><span class="nav-number">2.</span> <span class="nav-text">二、 控制台使用说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-移动"><span class="nav-number">2.1.</span> <span class="nav-text">1. 移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-舞蹈"><span class="nav-number">2.2.</span> <span class="nav-text">2. 舞蹈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-模仿"><span class="nav-number">2.3.</span> <span class="nav-text">3. 模仿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-对话"><span class="nav-number">2.4.</span> <span class="nav-text">4. 对话</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-休息"><span class="nav-number">2.5.</span> <span class="nav-text">5.    休息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-电源"><span class="nav-number">2.6.</span> <span class="nav-text">6.    电源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、-特别说明："><span class="nav-number">3.</span> <span class="nav-text">三、 特别说明：</span></a></li></ol></div>
+              <p class="post-toc-empty">此文未划分目录</p>
             
           </div>
         </section>
@@ -727,6 +739,135 @@
 
   
   
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
   
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
