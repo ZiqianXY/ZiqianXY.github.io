@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ziqianxy.github.io/art/2015-12/blog-setup/</loc>
+    
+    <lastmod>2017-03-02T11:59:12.978Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ziqianxy.github.io/art/2016-06/QrCode-process-with-python/</loc>
     
     <lastmod>2017-03-01T08:59:26.647Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://ziqianxy.github.io/art/2016-02/app-wanjuanwu/</loc>
     
     <lastmod>2017-03-01T08:57:48.166Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ziqianxy.github.io/art/2015-12/blog-setup/</loc>
-    
-    <lastmod>2017-03-01T08:55:30.385Z</lastmod>
     
   </url>
   

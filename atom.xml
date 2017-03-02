@@ -364,7 +364,7 @@
     <link href="http://ziqianxy.github.io/art/2015-12/blog-setup/"/>
     <id>http://ziqianxy.github.io/art/2015-12/blog-setup/</id>
     <published>2015-12-14T16:00:00.000Z</published>
-    <updated>2017-03-01T08:55:30.385Z</updated>
+    <updated>2017-03-02T11:59:12.978Z</updated>
     
     <content type="html"><![CDATA[<p>本博客是由hexo驱动，使用hexo搭建静态博客，然后添加挂件丰富博客配置是一种快捷简单的方法，让博主只需关注于记录文字本身，无需繁杂的技术细节。这里就介绍一下如何一步一步轻松搞定个人博客的搭建。搭建过程中参考的一系列资料会附在文末，方便问题溯源。</p>
 <a id="more"></a>
@@ -378,6 +378,7 @@
 </li>
 </ul>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-<span class="keyword">cli</span> -g</div></pre></td></tr></table></figure>
+<h2 id="博客初始化"><a href="#博客初始化" class="headerlink" title="博客初始化"></a>博客初始化</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$ </span>hexo init &lt;folder&gt;</div><div class="line"><span class="variable">$ </span>cd &lt;folder&gt;</div><div class="line"><span class="variable">$ </span>npm install</div></pre></td></tr></table></figure>
 <h2 id="git使用和配置"><a href="#git使用和配置" class="headerlink" title="git使用和配置"></a>git使用和配置</h2><ul>
 <li>关于git的具体使用方法，参考<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">廖雪峰的git指南</a></li>
 <li>常见问题解决参考<a href="https://help.github.com/" target="_blank" rel="external">github官方指南</a></li>
