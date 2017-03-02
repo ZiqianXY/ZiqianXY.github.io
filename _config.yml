@@ -19,11 +19,11 @@ permalink: art/:year-:month/:title/
 permalink_defaults:
 
 # search
-search:
- path: search.xml
- field: post
- format: html
- limit: 10000
+#search:
+#  path: search.xml
+#  field: post
+#  format: html
+#  limit: 10000
  
 
 # Directory
@@ -80,6 +80,6 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  message: update article blog-setup from deepin@PC.
+  message: disable search and share function from deepin@PC.
   repo: git@github.com:ziqianxy/ziqianxy.github.io.git
   branch: master
