@@ -1,6 +1,7 @@
 ---
 title: 用Hexo搭建个人博客
 date: 2015-12-15
+update: 2017-03-01
 tags: [app, blog, dev, hexo, next]
 categories: [dev, blog]
 ---
@@ -23,6 +24,13 @@ categories: [dev, blog]
 
 ```
 npm install hexo-cli -g
+```
+
+## 博客初始化
+```
+$ hexo init <folder>
+$ cd <folder>
+$ npm install
 ```
 
 ## git使用和配置
